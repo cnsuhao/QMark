@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/m_favorite_delete_panel_window_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black_alpha_7f"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/m_favorite_delete_panel_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp" >
+
+        <!-- android:background="@drawable/bg_m_favorite_delete_panel_centent_s" -->
+
+        <Button
+            android:id="@+id/m_favorite_delete_panel_btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_m_favorite_delete_panel_btn_delete_x"
+            android:text="@string/m_favorite_delete_panel_btn_delete"
+            android:textColor="@color/text_m_favorite_delete_panel_btn_delete_x"
+            android:textSize="@dimen/text_size_login_21" />
+
+        <Button
+            android:id="@+id/m_favorite_delete_panel_btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_m_favorite_delete_panel_btn_cancel_x"
+            android:text="@string/m_favorite_delete_panel_btn_cancel"
+            android:textColor="@color/text_m_favorite_delete_panel_btn_cancel_x"
+            android:textSize="@dimen/text_size_login_21" />
+    </LinearLayout>
+
+</FrameLayout>

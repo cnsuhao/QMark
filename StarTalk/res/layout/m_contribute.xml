@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+        <ImageButton
+            android:id="@+id/m_contribute_title_left_btn_back"
+            style="@style/StarTalk.Title.Image.Left"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/btn_m_title_left_back_x" />
+
+        <TextView
+            android:id="@+id/m_contribute_title_text"
+            style="@style/StarTalk.Title.Text.Center"
+            android:text="@string/title_m_contribute" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_m_contribute_edit_text_s"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="2dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/m_contribute_edit_title_name"
+                    android:textColor="@color/text_m_settings_item_name"
+                    android:textSize="@dimen/text_size_18" />
+
+                <EditText
+                    android:id="@+id/m_contribute_edit_title"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/m_contribute_edit_title_hint"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/text_m_contribute_content"
+                    android:textColorHint="@color/divider_m_settings"
+                    android:textSize="@dimen/text_size_18" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/divider_m_settings" />
+
+            <EditText
+                android:id="@+id/m_contribute_edit_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="13dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="13dp"
+                android:background="@null"
+                android:gravity="top|left"
+                android:hint="@string/m_contribute_edit_content_hint"
+                android:minLines="5"
+                android:textColor="@color/text_m_contribute_content"
+                android:textColorHint="@color/divider_m_settings"
+                android:textSize="@dimen/text_size_15" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/m_contribute_grid_view"
+        style="@style/StarTalk.GridView.SelectorTransparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:horizontalSpacing="1px"
+        android:numColumns="5"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="1px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_m_settings" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="14dp" >
+
+        <ImageButton
+            android:id="@+id/m_contribute_btn_add_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/btn_m_contribute_add_img" />
+
+        <Button
+            android:id="@+id/m_contribute_btn_commit"
+            android:layout_width="73dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_m_contribute_commit_x"
+            android:text="@string/m_contribute_btn_commit"
+            android:textColor="@color/btn_text_m_contribute_commit_x"
+            android:textSize="@dimen/text_size_18" />
+    </RelativeLayout>
+
+</LinearLayout>

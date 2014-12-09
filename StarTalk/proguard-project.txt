@@ -1,0 +1,78 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+#否则会有很多警告导致无法打包
+-dontwarn com.umeng.**
+-dontwarn cn.sharesdk.**
+-dontwarn android.support.**
+-dontwarn org.apache.**
+
+#保持所有的R类，防止有很多需要通过资源名称取得id的情况
+-keep class **.R$*{*;}
+
+-keepattributes Signature
+-keep class com.google.gson.stream.**{*;}
+
+#上面已经有了-keepattributes Signature保持泛型
+-keep class * extends **.ViewHolder{
+	<methods>;
+}
+-keep class * extends com.wei.c.data.abs.**{*;}
+#-keep class * extends com.tisumoon.data.abs.**{*;}
+#有些类虽然不是继承自**.data.abs.**,但是仍然需要被gson反序列化，
+#如：com.star.talk.startalk.data.api.beans.MagicBoardBody
+#因此需要keep变量
+-keepclassmembers class **.data.**{
+	<fields>;
+}
+#在**.data.**包里面有匿名的TypeToken的子类，下面的方法都是无法keep的，因为匿名类并没有显式的使用extends关键字
+#-keep class **.TypeToken{*;}
+#-keep class * extends **.TypeToken{*;}
+#TypeToken的匿名子类会以这种形式显示：如**.data.api.Login$1
+-keep class **.data.**.*$*{*;}
+
+#下面是友盟的注意事项
+-keepclassmembers class * {
+   public <init>(org.json.JSONObject);
+}
+-keep public class com.umeng.fb.ui.ThreadView {}
+-keep,allowshrinking class org.android.agoo.service.* {
+    public <fields>;
+    public <methods>;
+}
+-keep,allowshrinking class com.umeng.message.* {
+    public <fields>;
+    public <methods>;
+}
+
+#添加第三方jar包
+#-libraryjars libs/umeng-sdk.jar(暂不用，注意路径需要重写)
+#以下类过滤不混淆
+-keep public class * extends com.umeng.**
+#以下包不进行过滤
+#-keep class com.umeng.**{*;}
+
+#以下是sharesdk的
+-keep class cn.sharesdk.**{*;}
+-keep class com.sina.**{*;}
+-keep class m.framework.**{*;}
+-keep class org.apache.**{*;}
+

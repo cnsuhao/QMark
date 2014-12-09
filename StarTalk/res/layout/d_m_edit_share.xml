@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="275dp"
+    android:layout_height="300dp"
+    android:background="@drawable/bg_d_m_edit_s" >
+
+    <LinearLayout
+        android:id="@+id/d_m_edit_share_title_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="1px"
+            android:layout_weight="1"
+            android:background="@color/divider_d_m_edit_share" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:text="@string/title_d_m_edit_share_send_to"
+            android:textColor="@color/text_d_m_edit_share_platform_name"
+            android:textSize="@dimen/text_size_15" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="1px"
+            android:layout_weight="1"
+            android:background="@color/divider_d_m_edit_share" />
+    </LinearLayout>
+
+    <!-- sina weibo -->
+
+    <TextView
+        android:id="@+id/d_m_edit_share_sina_weibo_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/d_m_edit_share_title_panel"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="26dp"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/btn_d_m_edit_share_sina_weibo_x"
+        android:gravity="center_horizontal"
+        android:text="@string/d_m_edit_share_sina_weibo_text"
+        android:textColor="@color/text_d_m_edit_share_platform_name_x"
+        android:textSize="@dimen/text_size_12" />
+
+    <ImageView
+        android:id="@+id/d_m_edit_share_sina_weibo_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/d_m_edit_share_sina_weibo_btn"
+        android:layout_alignTop="@id/d_m_edit_share_sina_weibo_btn"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="27dp"
+        android:contentDescription="@null"
+        android:src="@drawable/btn_d_m_edit_share_ok" />
+
+    <!-- qzone -->
+
+    <TextView
+        android:id="@+id/d_m_edit_share_qzone_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/d_m_edit_share_sina_weibo_btn"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/btn_d_m_edit_share_qzone_x"
+        android:gravity="center_horizontal"
+        android:text="@string/d_m_edit_share_qzone_text"
+        android:textColor="@color/text_d_m_edit_share_platform_name_x"
+        android:textSize="@dimen/text_size_12" />
+
+    <ImageView
+        android:id="@+id/d_m_edit_share_qzone_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/d_m_edit_share_qzone_btn"
+        android:layout_alignTop="@id/d_m_edit_share_qzone_btn"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="27dp"
+        android:contentDescription="@null"
+        android:src="@drawable/btn_d_m_edit_share_ok" />
+
+    <!-- wechat moments -->
+
+    <TextView
+        android:id="@+id/d_m_edit_share_wechat_moments_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/d_m_edit_share_sina_weibo_btn"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/btn_d_m_edit_share_wechat_moments_x"
+        android:gravity="center_horizontal"
+        android:text="@string/d_m_edit_share_wechat_moments_text"
+        android:textColor="@color/text_d_m_edit_share_platform_name_x"
+        android:textSize="@dimen/text_size_12" />
+
+    <ImageView
+        android:id="@+id/d_m_edit_share_wechat_moments_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/d_m_edit_share_wechat_moments_btn"
+        android:layout_alignTop="@id/d_m_edit_share_wechat_moments_btn"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="27dp"
+        android:contentDescription="@null"
+        android:src="@drawable/btn_d_m_edit_share_ok" />
+
+    <!-- wechat -->
+
+    <TextView
+        android:id="@+id/d_m_edit_share_wechat_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/d_m_edit_share_sina_weibo_btn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="27dp"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/btn_d_m_edit_share_wechat_x"
+        android:gravity="center_horizontal"
+        android:text="@string/d_m_edit_share_wechat_text"
+        android:textColor="@color/text_d_m_edit_share_platform_name_x"
+        android:textSize="@dimen/text_size_12" />
+
+    <ImageView
+        android:id="@+id/d_m_edit_share_wechat_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/d_m_edit_share_wechat_btn"
+        android:layout_alignTop="@id/d_m_edit_share_wechat_btn"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="27dp"
+        android:contentDescription="@null"
+        android:src="@drawable/btn_d_m_edit_share_ok" />
+
+    <!-- qq -->
+
+    <TextView
+        android:id="@+id/d_m_edit_share_qq_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/d_m_edit_share_wechat_btn"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/btn_d_m_edit_share_qq_x"
+        android:gravity="center_horizontal"
+        android:text="@string/d_m_edit_share_qq_text"
+        android:textColor="@color/text_d_m_edit_share_platform_name_x"
+        android:textSize="@dimen/text_size_12" />
+
+    <ImageView
+        android:id="@+id/d_m_edit_share_qq_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/d_m_edit_share_qq_btn"
+        android:layout_alignTop="@id/d_m_edit_share_qq_btn"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="27dp"
+        android:contentDescription="@null"
+        android:src="@drawable/btn_d_m_edit_share_ok" />
+
+    <!-- local -->
+
+    <TextView
+        android:id="@+id/d_m_edit_share_local_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/d_m_edit_share_wechat_btn"
+        android:layout_marginRight="18dp"
+        android:background="@null"
+        android:drawablePadding="4dp"
+        android:drawableTop="@drawable/btn_d_m_edit_share_local_x"
+        android:gravity="center_horizontal"
+        android:text="@string/d_m_edit_share_local_text"
+        android:textColor="@color/text_d_m_edit_share_platform_name_x"
+        android:textSize="@dimen/text_size_12" />
+
+    <ImageView
+        android:id="@+id/d_m_edit_share_local_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/d_m_edit_share_local_btn"
+        android:layout_alignTop="@id/d_m_edit_share_local_btn"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="27dp"
+        android:contentDescription="@null"
+        android:src="@drawable/btn_d_m_edit_share_ok" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/d_m_edit_share_wechat_btn"
+        android:layout_marginTop="33dp"
+        android:background="@color/divider_d_m_edit_share" />
+
+    <Button
+        android:id="@+id/d_m_edit_share_complete"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:text="@string/d_m_edit_share_complete_btn"
+        android:textColor="@color/text_d_m_edit_share_complete"
+        android:textSize="@dimen/text_size_18" />
+
+</RelativeLayout>

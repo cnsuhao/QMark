@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <solid android:color="@color/bg_f_m_tabs_sign_in_board_title_right_msg" />
+
+</shape>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/shape_overturn_laoding_color_purple"
+        android:maxLevel="1">
+    </item>
+    <item
+        android:drawable="@drawable/shape_overturn_laoding_color_orange"
+        android:maxLevel="2">
+    </item>
+    <item
+        android:drawable="@drawable/shape_overturn_laoding_color_yellow"
+        android:maxLevel="3">
+    </item>
+    <item
+        android:drawable="@drawable/shape_overturn_laoding_color_pink"
+        android:maxLevel="4">
+    </item>
+    <item
+        android:drawable="@drawable/shape_overturn_laoding_color_green"
+        android:maxLevel="5">
+    </item>
+    <item
+        android:drawable="@drawable/shape_overturn_laoding_color_red"
+        android:maxLevel="6">
+    </item>
+    <item
+        android:drawable="@drawable/shape_overturn_laoding_color_blue"
+        android:maxLevel="7">
+    </item>
+
+</level-list>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StarTalk" />
+
+    <style name="StarTalk.ListView">
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+    </style>
+
+    <style name="StarTalk.ListView.NoDivider">
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0px</item>
+    </style>
+
+    <style name="StarTalk.ListView.NoDivider.WhiteBg">
+        <item name="android:background">@color/bg_app</item>
+    </style>
+
+    <style name="StarTalk.ListView.NoDivider.WhiteBg.SelectorTransparent">
+        <item name="android:listSelector">@drawable/list_selector_transparent</item>
+    </style>
+
+    <style name="StarTalk.GridView">
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+    </style>
+
+    <style name="StarTalk.GridView.SelectorTransparent">
+        <item name="android:listSelector">@drawable/list_selector_transparent</item>
+    </style>
+
+    <style name="StarTalk.GridView.SelectorTransparent.EditPage">
+        <item name="android:background">@color/divider_m_edit_gridview</item>
+    </style>
+
+    <style name="StarTalk.Text" />
+
+    <!-- <style name="StarTalk.SideSlideView"> -->
+    <!-- <item name="android:background">@android:color/white</item> -->
+    <!-- <item name="slideInterpolator">@android:anim/decelerate_interpolator</item> -->
+    <!-- <item name="shakeAnimDuration">450</item> -->
+    <!-- <item name="slideAnimDuration">300</item> -->
+    <!-- </style> -->
+    <!-- <style name="StarTalk.SideSlideView.TitleBg"> -->
+    <!-- <item name="android:layout_width">match_parent</item> -->
+    <!-- <item name="android:layout_height">@dimen/height_title</item> -->
+    <!-- <item name="android:background">@color/bg_color_title_gray</item> -->
+    <!-- </style> -->
+
+    <style name="StarTalk.Text.ChooseStarSign">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:textColor">#595959</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="StarTalk.ProgressBar" parent="android:Widget.ProgressBar" />
+
+    <style name="StarTalk.ProgressBar.Prompt">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:minHeight">8dp</item>
+        <item name="android:maxHeight">8dp</item>
+        <!-- <item name="android:progressDrawable"></item> -->
+    </style>
+
+    <style name="StarTalk.Rotate" parent="StarTalk.ProgressBar" />
+
+    <style name="StarTalk.Rotate.More">
+        <item name="android:indeterminateDrawable">@drawable/prog_i_m_favorite_more_rotate</item>
+    </style>
+
+</resources>

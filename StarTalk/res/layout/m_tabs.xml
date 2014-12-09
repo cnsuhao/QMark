@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/m_tabs_content_panel"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_title_bottom_black_alpha_4c" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/padding_top_10"
+        android:paddingTop="@dimen/padding_top_10" >
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:id="@+id/m_tabs_btn_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_m_tabs_tabbar_edit_x"
+            android:button="@null"
+            android:contentDescription="@null" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1.7" />
+
+        <RadioButton
+            android:id="@+id/m_tabs_btn_sign_in_board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_m_tabs_tabbar_sign_in_board_x"
+            android:button="@null"
+            android:contentDescription="@null" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1.7" />
+
+        <RadioButton
+            android:id="@+id/m_tabs_btn_mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_m_tabs_tabbar_mine_x"
+            android:button="@null"
+            android:contentDescription="@null" />
+
+        <View
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+</LinearLayout>

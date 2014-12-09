@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="11dp"
+    android:paddingLeft="@dimen/padding_page_common_10"
+    android:paddingRight="@dimen/padding_page_common_10"
+    android:paddingTop="15dp" >
+
+    <com.star.talk.startalk.widget.AspectRatioFrameLayout
+        android:id="@+id/i_m_category_v_1_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:aspectRatioFl="2.94" >
+
+        <RelativeLayout
+            android:id="@+id/i_m_category_v_1_lock_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_i_m_category_v_1_lock_panel" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@null"
+                android:src="@drawable/img_i_m_category_lock_limit" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/img_i_m_category_lock" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@null"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_i_m_category_lock_tail_left" />
+
+                    <TextView
+                        android:id="@+id/i_m_category_v_1_text_lock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/i_m_category_v_1_text_lock_invite_friend"
+                        android:textColor="@color/bg_app_alpha_cc"
+                        android:textSize="@dimen/text_size_15" />
+
+                    <ImageView
+                        android:layout_width="0px"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/img_i_m_category_lock_tail_right"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.star.talk.startalk.widget.AspectRatioFrameLayout>
+
+    <TextView
+        android:id="@+id/i_m_category_v_1_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/i_m_category_v_1_img"
+        android:layout_marginTop="8dp"
+        android:singleLine="true"
+        android:textColor="@color/text_i_m_category_v_1_text_title"
+        android:textSize="@dimen/text_size_title_19" />
+
+    <TextView
+        android:id="@+id/i_m_category_v_1_text_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/i_m_category_v_1_text_title"
+        android:layout_marginTop="3dp"
+        android:singleLine="true"
+        android:textColor="@color/text_i_m_category_v_1_text_author"
+        android:textSize="@dimen/text_size_13" />
+
+    <TextView
+        android:id="@+id/i_m_category_v_1_text_sign_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/i_m_category_v_1_text_author"
+        android:layout_alignParentRight="true"
+        android:singleLine="true"
+        android:textColor="@color/text_i_m_category_v_1_text_sign_count"
+        android:textSize="@dimen/text_size_13" />
+
+</RelativeLayout>

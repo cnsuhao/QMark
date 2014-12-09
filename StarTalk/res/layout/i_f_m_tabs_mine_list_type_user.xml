@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.star.talk.startalk.widget.BlurBgRelativeLayout
+        android:id="@+id/i_f_m_tabs_mine_list_type_user_img_blur_bg"
+        android:layout_width="match_parent"
+        android:layout_height="168dp"
+        app:blurRadius="15" >
+
+        <com.wei.c.widget.CircleImageView
+            android:id="@+id/i_f_m_tabs_mine_list_type_user_img_head"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17.5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/test_head" />
+
+        <TextView
+            android:id="@+id/i_f_m_tabs_mine_list_type_user_text_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/i_f_m_tabs_mine_list_type_user_img_head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:lineSpacingMultiplier="0.9"
+            android:singleLine="true"
+            android:text="ToDo萌萌哒"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_15" />
+
+        <TextView
+            android:id="@+id/i_f_m_tabs_mine_list_type_user_text_starsign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/i_f_m_tabs_mine_list_type_user_text_nickname"
+            android:layout_centerHorizontal="true"
+            android:lineSpacingMultiplier="0.9"
+            android:singleLine="true"
+            android:text="射手座  北京"
+            android:textColor="@color/text_white_alpha_8f"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/i_f_m_tabs_mine_list_type_user_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/i_f_m_tabs_mine_list_type_user_text_starsign"
+            android:layout_centerHorizontal="true"
+            android:lineSpacingMultiplier="0.9"
+            android:singleLine="true"
+            android:text="ID:2461147497"
+            android:textColor="@color/text_white_alpha_8f"
+            android:textSize="@dimen/text_size_12" />
+    </com.star.talk.startalk.widget.BlurBgRelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/i_f_m_tabs_mine_list_type_user_my_friends_panel"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:background="#ededed"
+        android:paddingLeft="@dimen/padding_page_common_10"
+        android:paddingRight="@dimen/padding_page_common_10" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/i_f_m_tabs_mine_list_type_user_text_my_friends"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageView
+            android:id="@+id/i_f_m_tabs_mine_list_type_user_img_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_i_f_m_tabs_mine_list_type_user_friends" />
+
+        <TextView
+            android:id="@+id/i_f_m_tabs_mine_list_type_user_text_new_friends_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/i_f_m_tabs_mine_list_type_user_img_arrow"
+            android:background="@drawable/bg_i_f_m_tabs_mine_list_type_user_text_new_friends_count"
+            android:text="+69"
+            android:textColor="@color/bg_app"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+
+</LinearLayout>

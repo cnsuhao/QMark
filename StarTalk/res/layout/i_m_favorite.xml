@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.star.talk.startalk.widget.AspectRatioFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/empty_photo_2"
+    android:padding="1px"
+    app:aspectRatioFl="1" >
+
+    <com.star.talk.startalk.widget.MagicBoardView
+        android:id="@+id/i_m_favorite_magic_board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:magicAspectRatio="1"
+        app:magicEditMode="false" />
+
+    <RelativeLayout
+        android:id="@+id/i_m_favorite_translucence_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_black_alpha_7f" >
+
+        <CheckBox
+            android:id="@+id/i_m_favorite_checkbox_gou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:button="@drawable/btn_i_m_favorite_delete_gou_x"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+    </RelativeLayout>
+
+</com.star.talk.startalk.widget.AspectRatioFrameLayout>

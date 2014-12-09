@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="height_title_44">44dp</dimen>
+    <dimen name="height_btn_49">49dp</dimen>
+
+    <dimen name="padding_title_left_or_right_11">11dp</dimen>
+    <dimen name="padding_page_common_10">10dp</dimen>
+    <dimen name="padding_top_10">10dp</dimen>
+
+    <dimen name="margin_title_center_5">5dp</dimen>
+    <dimen name="margin_bottom_45">45dp</dimen>
+
+    <dimen name="text_size_title_19">19dp</dimen>
+    <dimen name="text_size_title_14">14dp</dimen>
+
+    <dimen name="text_size_login_21">21dp</dimen>
+
+    <dimen name="text_size_18">18dp</dimen>
+    <dimen name="text_size_17">17dp</dimen>
+    <dimen name="text_size_16">16dp</dimen>
+    <dimen name="text_size_15">15dp</dimen>
+    <dimen name="text_size_13">13dp</dimen>
+    <dimen name="text_size_12">12dp</dimen>
+    <dimen name="text_size_10">10dp</dimen>
+
+</resources>

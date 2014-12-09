@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+        <TextView
+            style="@style/StarTalk.Title.Text.Center"
+            android:text="@string/title_m_choose_star_sign" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:fadeScrollbars="true"
+        android:fadingEdge="none" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <!-- first line -->
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_baiyang"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_baiyang_x" />
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_jinniu"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_alignBaseline="@id/m_choose_star_sign_btn_baiyang"
+                android:layout_centerHorizontal="true"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_jinniu_x" />
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_shuangzi"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_alignBaseline="@id/m_choose_star_sign_btn_baiyang"
+                android:layout_alignParentRight="true"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_shuangzi_x" />
+
+            <!-- second line -->
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_juxie"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_below="@id/m_choose_star_sign_btn_baiyang"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_juxie_x" />
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_shizi"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_alignBaseline="@id/m_choose_star_sign_btn_juxie"
+                android:layout_centerHorizontal="true"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_shizi_x" />
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_chunv"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_alignBaseline="@id/m_choose_star_sign_btn_juxie"
+                android:layout_alignParentRight="true"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_chunv_x" />
+
+            <!-- third line -->
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_tianping"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_below="@id/m_choose_star_sign_btn_juxie"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_tianping_x" />
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_tianxie"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_alignBaseline="@id/m_choose_star_sign_btn_tianping"
+                android:layout_centerHorizontal="true"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_tianxie_x" />
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_sheshou"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_alignBaseline="@id/m_choose_star_sign_btn_tianping"
+                android:layout_alignParentRight="true"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_sheshou_x" />
+
+            <!-- fourth line -->
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_mojie"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_below="@id/m_choose_star_sign_btn_tianping"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_mojie_x" />
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_shuiping"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_alignBaseline="@id/m_choose_star_sign_btn_mojie"
+                android:layout_centerHorizontal="true"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_shuiping_x" />
+
+            <TextView
+                android:id="@+id/m_choose_star_sign_btn_shuangyu"
+                style="@style/StarTalk.Text.ChooseStarSign"
+                android:layout_alignBaseline="@id/m_choose_star_sign_btn_mojie"
+                android:layout_alignParentRight="true"
+                android:drawableTop="@drawable/btn_m_choose_star_sign_shuangyu_x" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

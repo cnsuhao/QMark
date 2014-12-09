@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+        <ImageButton
+            android:id="@+id/m_abs_site_title_left_btn_back"
+            style="@style/StarTalk.Title.Image.Left"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/btn_m_title_left_back_x" />
+
+        <TextView
+            android:id="@+id/m_abs_site_title_text"
+            style="@style/StarTalk.Title.Text.Center" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/m_abs_site_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/i_m_guide_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_i_m_guide_4" >
+
+    <ImageButton
+        android:id="@+id/i_m_guide_btn_complete"
+        android:layout_width="190dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="3dp"
+        android:background="@null"
+        android:contentDescription="@null"
+        android:src="@null" />
+
+</RelativeLayout>

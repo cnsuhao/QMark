@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:id="@+id/i_footer_pull_2_refresh_panel_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="1dp"
+            android:text="@string/i_footer_pull_2_refresh_more_loading"
+            android:textColor="@color/text_gray"
+            android:textSize="@dimen/text_size_15" />
+
+        <com.wei.c.widget.OverturnLoadingView
+            android:id="@+id/i_footer_pull_2_refresh_overturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/anim_list_i_pull_2_refresh_overturn_loading_footer"
+            app:overturnAutoStart="true"
+            app:overturnCyclicality="500"
+            app:overturnInterpolator="@android:anim/accelerate_decelerate_interpolator"
+            app:overturnMaxLevel="7"
+            app:overturnMinLevel="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/i_footer_pull_2_refresh_no_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawablePadding="5dp"
+        android:drawableTop="@drawable/img_i_footer_pull_2_refresh_no_more"
+        android:gravity="center"
+        android:text="@string/i_footer_pull_2_refresh_no_more"
+        android:textColor="@color/text_i_footer_pull_2_refresh_no_more"
+        android:textSize="@dimen/text_size_15" />
+
+</FrameLayout>

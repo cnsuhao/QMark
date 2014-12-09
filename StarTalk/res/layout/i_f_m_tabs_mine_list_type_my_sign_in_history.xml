@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginBottom="9dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="26dp"
+        android:text="12月31日"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/text_size_13" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.star.talk.startalk.widget.SquareMagicBoardView
+            android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_magic_board"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:magicEditMode="false" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/bg_black_alpha_7f"
+            android:clickable="true"
+            android:paddingLeft="@dimen/padding_page_common_10" >
+
+            <TextView
+                android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_text_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/img_i_f_f_m_tabs_sign_in_board_friends_list_location"
+                android:drawablePadding="4dp"
+                android:singleLine="true"
+                android:text="北京"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_text_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/i_f_m_tabs_mine_list_type_my_sign_in_history_text_location"
+                android:drawableLeft="@drawable/img_i_f_f_m_tabs_sign_in_board_friends_list_comment_l"
+                android:drawablePadding="4dp"
+                android:singleLine="true"
+                android:text="65"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_13" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/i_f_m_tabs_mine_list_type_my_sign_in_history_text_comment"
+                android:src="@drawable/i_f_m_tabs_mine_list_type_my_sign_in_history_line_between" />
+
+            <TextView
+                android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_text_aixing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="18dp"
+                android:layout_toRightOf="@id/i_f_m_tabs_mine_list_type_my_sign_in_history_text_comment"
+                android:drawableLeft="@drawable/img_i_f_f_m_tabs_sign_in_board_friends_list_aixing_l"
+                android:drawablePadding="4dp"
+                android:singleLine="true"
+                android:text="99"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_13" />
+
+            <ImageButton
+                android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_btn_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:src="@drawable/btn_i_f_m_tabs_mine_list_type_my_sign_in_history_more" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_more_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom|right"
+            android:background="@color/bg_i_f_m_tabs_mine_list_type_my_sign_in_history_click_panel"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageButton
+                android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_btn_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/btn_i_f_m_tabs_mine_list_type_my_sign_in_history_resend" />
+
+            <ImageButton
+                android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:background="@null"
+                android:src="@drawable/btn_i_f_m_tabs_mine_list_type_my_sign_in_history_delete" />
+
+            <ImageButton
+                android:id="@+id/i_f_m_tabs_mine_list_type_my_sign_in_history_btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="29dp"
+                android:background="@null"
+                android:src="@drawable/btn_i_f_m_tabs_mine_list_type_my_sign_in_history_close" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

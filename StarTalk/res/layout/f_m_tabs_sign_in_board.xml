@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+        <TextView
+            style="@style/StarTalk.Title.Text.Center"
+            android:text="@string/title_f_m_tabs_sign_in_board" />
+
+        <ImageButton
+            android:id="@+id/f_m_tabs_sign_in_board_title_right_btn_msg"
+            style="@style/StarTalk.Title.Image.Right"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/btn_f_m_tabs_sign_in_board_title_right_msg_x" />
+
+        <TextView
+            android:id="@+id/f_m_tabs_sign_in_board_text_msg_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="12.5dp"
+            android:layout_marginRight="22dp"
+            android:background="@drawable/bg_f_m_tabs_sign_in_board_title_right_msg_mount_s"
+            android:paddingBottom="1dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:text="99+"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_10" />
+    </RelativeLayout>
+
+    <!-- <View -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="1px" -->
+    <!-- android:background="@color/separator_line_sign_in_board" /> -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/f_m_tabs_sign_in_board_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" >
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/f_m_tabs_sign_in_board_pagertab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:textColor="@android:color/black" />
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

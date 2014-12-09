@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.star.talk.startalk.widget.AspectRatioFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/empty_photo_2"
+    android:padding="1px"
+    app:aspectRatioFl="1" >
+
+    <com.star.talk.startalk.widget.MagicBoardView
+        android:id="@+id/i_m_edit_magic_board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:magicAspectRatio="1"
+        app:magicEditMode="false" />
+
+    <ImageView
+        android:id="@+id/i_m_edit_img_favorite_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@null"
+        android:src="@drawable/img_i_m_edit_favorite_yes_l" />
+
+    <RelativeLayout
+        android:id="@+id/i_m_edit_translucence_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_i_m_edit_translucence_panel"
+        android:clickable="true" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@null"
+            android:src="@drawable/img_i_m_edit_smile_face" />
+
+        <CheckBox
+            android:id="@+id/i_m_edit_cb_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:button="@drawable/btn_i_m_edit_favorite_s" />
+
+        <ImageView
+            android:id="@+id/i_m_edit_img_favorite_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:src="@drawable/img_i_m_edit_favorite_yes_b" />
+    </RelativeLayout>
+
+</com.star.talk.startalk.widget.AspectRatioFrameLayout>

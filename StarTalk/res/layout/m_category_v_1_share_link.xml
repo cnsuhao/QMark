@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/m_category_v_1_share_link_window_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black_alpha_7f"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/m_category_v_1_share_link_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <Button
+            android:id="@+id/m_category_v_1_share_link_btn_wechat"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/bg_m_category_v_1_share_link_btn_x"
+            android:text="@string/m_category_v_1_share_link_btn_wechat"
+            android:textColor="@color/text_m_category_v_1_share_link_x"
+            android:textSize="@dimen/text_size_title_19" />
+
+        <Button
+            android:id="@+id/m_category_v_1_share_link_btn_wechat_moments"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_m_category_v_1_share_link_btn_x"
+            android:text="@string/m_category_v_1_share_link_btn_wechat_moment"
+            android:textColor="@color/text_m_category_v_1_share_link_x"
+            android:textSize="@dimen/text_size_title_19" />
+
+        <Button
+            android:id="@+id/m_category_v_1_share_link_btn_qq"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_m_category_v_1_share_link_btn_x"
+            android:text="@string/m_category_v_1_share_link_btn_qq"
+            android:textColor="@color/text_m_category_v_1_share_link_x"
+            android:textSize="@dimen/text_size_title_19" />
+
+        <Button
+            android:id="@+id/m_category_v_1_share_link_btn_qzone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_m_category_v_1_share_link_btn_x"
+            android:text="@string/m_category_v_1_share_link_btn_qzone"
+            android:textColor="@color/text_m_category_v_1_share_link_x"
+            android:textSize="@dimen/text_size_title_19" />
+
+        <Button
+            android:id="@+id/m_category_v_1_share_link_btn_sina_weibo"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_m_category_v_1_share_link_btn_x"
+            android:text="@string/m_category_v_1_share_link_btn_sina_weibo"
+            android:textColor="@color/text_m_category_v_1_share_link_x"
+            android:textSize="@dimen/text_size_title_19" />
+
+        <Button
+            android:id="@+id/m_category_v_1_share_link_btn_complete"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_m_category_v_1_share_link_btn_x"
+            android:text="@string/m_category_v_1_share_link_btn_cancel"
+            android:textColor="@color/text_d_m_edit_share_complete"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+</FrameLayout>

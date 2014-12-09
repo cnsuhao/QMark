@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+        <ImageButton
+            android:id="@+id/m_feedback_title_left_btn_back"
+            style="@style/StarTalk.Title.Image.Left"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/btn_m_title_left_back_x" />
+
+        <TextView
+            style="@style/StarTalk.Title.Text.Center"
+            android:text="@string/title_m_feedback" />
+    </RelativeLayout>
+
+    <com.star.talk.startalk.widget.MagicBoardView
+        android:id="@+id/m_feedback_magic_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_m_feedback_magic"
+        app:magicAspectRatio="2.529"
+        app:magicBaseOnSrc_TextHeight="86"
+        app:magicBaseOnSrc_TextLeft="120"
+        app:magicBaseOnSrc_TextTop="67"
+        app:magicBaseOnSrc_TextWidth="270"
+        app:magicEditMode="false"
+        app:magicText="@string/m_feedback_magic_view"
+        app:magicTextColor="#67432d" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:gravity="center_vertical"
+        android:text="@string/m_feedback_text_fans_qq_group"
+        android:textColor="@color/text_m_settings_item_name"
+        android:textSize="@dimen/text_size_17" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/divider_black_alpha_27" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/img_m_feedback_qq_group"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="@string/m_feedback_text_qq_group_number"
+            android:textColor="@color/text_m_settings_item_name"
+            android:textSize="@dimen/text_size_15" />
+
+        <Button
+            android:id="@+id/m_feedback_btn_join_qq_group"
+            android:layout_width="55dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_m_feedback_join_qq_group_x"
+            android:text="@string/m_feedback_btn_join_qq_group"
+            android:textColor="@color/text_m_feedback_btn_join_qq_group_x"
+            android:textSize="@dimen/text_size_13" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/divider_black_alpha_27" />
+
+    <View
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <!-- android:layout_marginTop="45dp" -->
+
+    <Button
+        android:id="@+id/m_feedback_btn_to_contribute"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_btn_49"
+        android:layout_marginBottom="@dimen/margin_bottom_45"
+        android:background="@drawable/bg_m_settings_btn_exit_x"
+        android:gravity="center"
+        android:text="@string/m_feedback_btn_to_contribute"
+        android:textColor="@color/bg_app"
+        android:textSize="@dimen/text_size_login_21" />
+
+</LinearLayout>

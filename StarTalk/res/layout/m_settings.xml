@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/m_settings_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+            <ImageButton
+                android:id="@+id/m_settings_title_left_btn_back"
+                style="@style/StarTalk.Title.Image.Left"
+                android:background="@null"
+                android:contentDescription="@null"
+                android:src="@drawable/btn_m_title_left_back_x" />
+
+            <TextView
+                style="@style/StarTalk.Title.Text.Center"
+                android:text="@string/title_m_settings" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/divider_m_settings" />
+
+        <RelativeLayout
+            android:id="@+id/m_settings_item_comment"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_m_settings_item_x"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/m_settings_item_comment"
+                android:textColor="@color/text_m_settings_item_name"
+                android:textSize="@dimen/text_size_17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_m_settings_item_indicator"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/divider_m_settings" />
+
+        <RelativeLayout
+            android:id="@+id/m_settings_item_invite_friends"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_m_settings_item_x"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/m_settings_item_invite_friends"
+                android:textColor="@color/text_m_settings_item_name"
+                android:textSize="@dimen/text_size_17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_m_settings_item_indicator"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/divider_m_settings" />
+
+        <RelativeLayout
+            android:id="@+id/m_settings_item_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_m_settings_item_x"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/m_settings_item_feedback"
+                android:textColor="@color/text_m_settings_item_name"
+                android:textSize="@dimen/text_size_17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_m_settings_item_indicator" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/divider_m_settings" />
+
+        <RelativeLayout
+            android:id="@+id/m_settings_item_contribute"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_m_settings_item_x"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/m_settings_item_contribute"
+                android:textColor="@color/text_m_settings_item_name"
+                android:textSize="@dimen/text_size_17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_m_settings_item_indicator" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/divider_m_settings" />
+
+        <RelativeLayout
+            android:id="@+id/m_settings_item_site"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_m_settings_item_x"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/m_settings_item_site"
+                android:textColor="@color/text_m_settings_item_name"
+                android:textSize="@dimen/text_size_17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_m_settings_item_indicator" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/divider_m_settings" />
+
+        <RelativeLayout
+            android:id="@+id/m_settings_item_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_m_settings_item_x"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/m_settings_item_agreement"
+                android:textColor="@color/text_m_settings_item_name"
+                android:textSize="@dimen/text_size_17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_m_settings_item_indicator" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/divider_m_settings" />
+
+        <RelativeLayout
+            android:id="@+id/m_settings_item_about_us"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_m_settings_item_x"
+            android:padding="15dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/m_settings_item_about_us"
+                android:textColor="@color/text_m_settings_item_name"
+                android:textSize="@dimen/text_size_17" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/img_m_settings_item_indicator" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/divider_m_settings" />
+
+        <Button
+            android:id="@+id/m_settings_btn_exit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_btn_49"
+            android:layout_marginBottom="@dimen/margin_bottom_45"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_m_settings_btn_exit_x"
+            android:gravity="center"
+            android:text="@string/m_settings_btn_exit"
+            android:textColor="@color/bg_app"
+            android:textSize="@dimen/text_size_login_21" />
+    </LinearLayout>
+
+</ScrollView>

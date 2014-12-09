@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+
+    <!-- 修改成你在sharesdk后台注册的应用的appkey" -->
+
+    <ShareSDK AppKey="2f01f76be74e" />
+
+    <!-- ShareByAppClient标识是否使用微博客户端分享，默认是false -->
+
+    <QQ
+        AppId="1103420373"
+        AppKey="20EDJGwzt9xHMHLk"
+        Enable="true"
+        Id="1"
+        ShareByAppClient="true"
+        SortId="1" />
+
+    <!-- ShareByAppClient标识是否使用微博客户端分享，默认是false -->
+
+    <QZone
+        AppId="1103420373"
+        AppKey="20EDJGwzt9xHMHLk"
+        Enable="true"
+        Id="2"
+        ShareByAppClient="true"
+        SortId="2" />
+
+    <!-- ShareByAppClient标识是否使用微博客户端分享，默认是false。只有新浪微博设置为false才能使用一键静默分享，其他平台反正都要弹框，那不如弹客户端的框。
+    	这个其实是做了转短链处理，可以统计回流的，网址点开来还是原来的地址的。可以取消，但是取消后就不可以统计了。
+    	取消转短链 方法如下：
+    	<SinaWeibo
+    	Id="1"
+    	SortId="1"
+    	AppKey="568898243"
+    	AppSecret="38a4f8204cc784f81f9f0daaf31e02e3"
+    	RedirectUrl="http://www.sharesdk.cn"
+    	ShortLinkConversationEnable="true" />
+    	修改配置文件中 对应平台的
+    	ShortLinkConversationEnable="false"
+    	就可以关闭对应平台的转短链 -->
+
+    <SinaWeibo
+        AppKey="3073480093"
+        AppSecret="f09d9c3343c54ed2c5ada941edd7ec43"
+        Enable="true"
+        Id="3"
+        RedirectUrl="https://api.weibo.com/oauth2/default.html"
+        ShareByAppClient="true"
+        SortId="3" />
+
+    <!--
+        Wechat微信和WechatMoments微信朋友圈的appid是一样的；
+    	注意：开发者不能用我们这两个平台的appid,否则分享不了
+    	
+    	微信测试的时候，微信测试需要先签名打包出apk，sample测试微信，要先签名打包，keystore在sample项目中，密码123456
+		
+		BypassApproval是绕过审核的标记，设置为true后AppId将被忽略，故不经过
+		审核的应用也可以执行分享，但是仅限于分享文字和图片，不能分享其他类型，
+		默认值为false。此外，微信收藏不支持此字段。-->
+
+    <Wechat
+        AppId="wxdf420f6e4e95fcbd"
+        AppSecret="f2186ce8da3cb014074403dc6e771f4a"
+        BypassApproval="false"
+        Enable="true"
+        Id="4"
+        SortId="4" />
+
+    <WechatMoments
+        AppId="wxdf420f6e4e95fcbd"
+        AppSecret="f2186ce8da3cb014074403dc6e771f4a"
+        BypassApproval="false"
+        Enable="true"
+        Id="5"
+        SortId="5" />
+
+</DevInfor>

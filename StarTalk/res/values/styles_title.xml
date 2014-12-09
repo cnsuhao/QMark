@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StarTalk.Title" />
+
+    <style name="StarTalk.Title.Bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/height_title_44</item>
+        <item name="android:background">@color/bg_title_orange</item>
+    </style>
+
+    <style name="StarTalk.Title.Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/text_title_x</item>
+        <item name="android:textSize">@dimen/text_size_title_19</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="StarTalk.Title.Image">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="StarTalk.Title.Text.Left">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:paddingLeft">@dimen/padding_title_left_or_right_11</item>
+        <item name="android:paddingRight">@dimen/padding_title_left_or_right_11</item>
+    </style>
+
+    <style name="StarTalk.Title.Text.Center">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_title_center_5</item>
+        <item name="android:layout_marginRight">@dimen/margin_title_center_5</item>
+    </style>
+
+    <style name="StarTalk.Title.Text.Right">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingLeft">@dimen/padding_title_left_or_right_11</item>
+        <item name="android:paddingRight">@dimen/padding_title_left_or_right_11</item>
+    </style>
+
+    <style name="StarTalk.Title.Image.Left">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:paddingLeft">@dimen/padding_title_left_or_right_11</item>
+        <item name="android:paddingRight">@dimen/padding_title_left_or_right_11</item>
+    </style>
+
+    <style name="StarTalk.Title.Image.Center">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_title_center_5</item>
+        <item name="android:layout_marginRight">@dimen/margin_title_center_5</item>
+    </style>
+
+    <style name="StarTalk.Title.Image.Right">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingLeft">@dimen/padding_title_left_or_right_11</item>
+        <item name="android:paddingRight">@dimen/padding_title_left_or_right_11</item>
+    </style>
+
+    <style name="StarTalk.Title.Text.Right.Shadow">
+        <item name="android:shadowColor">@color/text_title_right_shadow</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+    <style name="StarTalk.Title.Text.Right.Favorite">
+        <item name="android:textSize">@dimen/text_size_17</item>
+    </style>
+
+</resources>

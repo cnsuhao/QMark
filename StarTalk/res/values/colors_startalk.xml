@@ -1,0 +1,68 @@
+<resources>
+
+    <color name="bg_app">#fefff8</color>
+    <color name="bg_app_alpha_cc">#ccfefff8</color>
+    <color name="bg_title_orange">#ff8e68</color>
+    <color name="bg_black_alpha_7f">#7f000000</color>
+    <color name="bg_white_alpha_7f">#7fffffff</color>
+    <color name="white">#ffffff</color>
+
+    <color name="text_title_orange">#f59053</color>
+    <color name="text_gray">#949494</color>
+    <color name="text_white_alpha_8f">#8fffffff</color>
+    <color name="text_title_right_shadow">#3f000000</color>
+
+    <color name="divider_title_bottom_black_alpha_4c">#4c000000</color>
+    <color name="divider_m_edit_gridview">#dcdcdc</color>
+    <color name="divider_d_m_edit_share">#cc939393</color>
+    <color name="divider_black_alpha_27">#27000000</color>
+    <color name="divider_m_settings">#eaeaea</color>
+
+    <color name="text_i_m_category_v_1_text_title">#5e5e58</color>
+    <color name="text_i_m_category_v_1_text_author">#9a9a9a</color>
+    <color name="text_i_m_category_v_1_text_sign_count">#bbab8e</color>
+    <color name="text_i_m_category_v_1_text_sign_count_num">#f7a184</color>
+    <color name="text_d_m_edit_share_title">#585252</color>
+    <color name="text_d_m_edit_share_platform_name">#646464</color>
+    <color name="text_d_m_edit_share_complete">#0666ff</color>
+    <color name="text_m_settings_item_name">#333333</color>
+    <color name="text_m_about_us_version">#514138</color>
+    <color name="text_i_footer_pull_2_refresh_no_more">#f4a88e</color>
+    <color name="text_m_feedback_btn_join_qq_group">#ff8258</color>
+    <color name="text_m_contribute_content">#767676</color>
+    <color name="text_m_favorite_radiobtn_checked">#ffc8b4</color>
+    <color name="text_m_favorite_delete_panel_btn_delete">#fed7d2</color>
+    <color name="text_m_favorite_delete_panel_btn_cancel">#007aff</color>
+    <color name="text_i_m_favorite_more_text">#acacab</color>
+
+    <color name="bg_i_m_category_v_1_lock_panel">#cc6d3e2f</color><!-- 3b1002 -->
+    <color name="bg_f_m_tabs_sign_in_board_title_right_msg">#89b270</color>
+    <color name="bg_i_f_m_tabs_mine_list_type_my_sign_in_history_click_panel">#e18851</color>
+    <color name="bg_i_m_edit_translucence_panel">#7f551905</color>
+    <color name="bg_m_about_us">#9ec984</color>
+    <color name="bg_m_contribute_btn_commit">#60b138</color>
+    <color name="bg_m_contribute_btn_commit_pressed">#529b2e</color>
+    <color name="bg_m_favorite_radiobtn">#ff9d7c</color>
+    <color name="bg_m_favorite_radiobtn_checked">#eb693d</color>
+
+    <drawable name="bg_app">#fefff8</drawable>
+    <drawable name="bg_m_settings_item_pressed">#e9e9e9</drawable>
+    <drawable name="bg_m_settings_btn_exit">#60b138</drawable>
+    <drawable name="bg_m_settings_btn_exit_pressed">#529b2e</drawable>
+    <drawable name="bg_m_favorite_delete_panel_btn_delete">#ff4040</drawable>
+    <drawable name="bg_m_favorite_delete_panel_btn_cancel">#dcdcdc</drawable>
+
+    <color name="m_favorite_swipe_refresh_0">#ff8e68</color>
+    <color name="m_favorite_swipe_refresh_1">#b8fb97</color>
+    <color name="m_favorite_swipe_refresh_2">#ffef68</color>
+    <color name="m_favorite_swipe_refresh_3">#97fbf7</color>
+
+    <color name="i_m_ya_img_bg_blue">#3fb6fb</color>
+    <color name="i_m_ya_img_bg_green">#40f29c</color>
+    <color name="i_m_ya_img_bg_purple">#765cf7</color>
+    <color name="i_m_ya_img_bg_yellow">#fdea42</color>
+    <color name="i_m_ya_img_bg_orange">#f8794c</color>
+    <color name="i_m_ya_img_bg_red">#f84747</color>
+    <color name="i_m_ya_img_bg_pink">#fd4895</color>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="15dp" >
+
+    <com.star.talk.startalk.widget.CornersFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornersAspectRatio="2.24"
+        app:cornersRadius="5dp" >
+
+        <LinearLayout
+            android:id="@+id/i_f_m_tabs_edit_source_img_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/i_f_m_tabs_edit_source_img_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_i_f_m_tabs_edit_source_xingzuo" />
+
+            <View
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:layout_weight="1.2" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="bottom"
+            android:background="@color/bg_black_alpha_7f"
+            android:gravity="center_vertical"
+            android:paddingLeft="9dp"
+            android:paddingRight="14dp" >
+
+            <TextView
+                android:id="@+id/i_f_m_tabs_edit_source_text_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="推荐"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/i_f_m_tabs_edit_source_text_sign_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="287"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_13" />
+        </RelativeLayout>
+    </com.star.talk.startalk.widget.CornersFrameLayout>
+
+</LinearLayout>

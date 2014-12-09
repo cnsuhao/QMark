@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+        <ImageButton
+            android:id="@+id/m_favorite_title_left_btn_back"
+            style="@style/StarTalk.Title.Image.Left"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/btn_m_title_left_back_x" />
+
+        <RadioGroup
+            style="@style/StarTalk.Title.Image.Center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/m_favorite_radiobtn_recent"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@id/m_favorite_radiobtn_recent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_m_favorite_radiobtn_left_x"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingLeft="2dp"
+                android:text="@string/m_favorite_radiobtn_left"
+                android:textColor="@color/text_m_favorite_radiobtn_x"
+                android:textSize="@dimen/text_size_15" />
+
+            <RadioButton
+                android:id="@+id/m_favorite_radiobtn_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_m_favorite_radiobtn_right_x"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingRight="2dp"
+                android:text="@string/m_favorite_radiobtn_right"
+                android:textColor="@color/text_m_favorite_radiobtn_x"
+                android:textSize="@dimen/text_size_15" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/m_favorite_title_right_manage"
+            style="@style/StarTalk.Title.Text.Right.Favorite"
+            android:text="@string/title_m_favorite_right_manage" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/m_favorite_swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <GridView
+                android:id="@+id/m_favorite_grid_view"
+                style="@style/StarTalk.GridView.SelectorTransparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="0px"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0px" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <ImageView
+            android:id="@+id/m_favorite_img_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null" />
+    </RelativeLayout>
+
+</LinearLayout>

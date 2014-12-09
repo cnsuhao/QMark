@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.star.talk.startalk.widget.AspectRatioFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:aspectRatioFl="1" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:background="@drawable/bg_i_m_favorite_more_s"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- <ImageView -->
+        <!-- android:id="@+id/i_m_favorite_more_img" -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="match_parent" -->
+        <!-- android:layout_gravity="center" -->
+        <!-- android:contentDescription="@null" -->
+        <!-- android:scaleType="center" -->
+        <!-- android:src="@drawable/btn_m_contribute_add_img" /> -->
+
+        <ProgressBar
+            android:id="@+id/i_m_favorite_more_progress"
+            style="@style/StarTalk.Rotate.More"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/i_m_favorite_more_img_shou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/img_i_m_favorite_more_shou" />
+
+        <TextView
+            android:id="@+id/i_m_favorite_more_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/i_m_favorite_more"
+            android:textColor="@color/text_i_m_favorite_more_text"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+</com.star.talk.startalk.widget.AspectRatioFrameLayout>

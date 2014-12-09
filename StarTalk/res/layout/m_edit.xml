@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.star.talk.startalk"
+    android:id="@+id/m_edit_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+        <ImageButton
+            android:id="@+id/m_edit_title_left_btn_back"
+            style="@style/StarTalk.Title.Image.Left"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/btn_m_title_left_back_x" />
+
+        <TextView
+            android:id="@+id/m_edit_title_right_fabu"
+            style="@style/StarTalk.Title.Text.Right.Shadow"
+            android:text="@string/title_m_edit_right_send" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" >
+
+        <ImageView
+            android:id="@+id/m_edit_img_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null"
+            android:src="@drawable/img_common_no_net" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <com.star.talk.startalk.widget.AspectRatioFrameLayout
+                android:id="@+id/m_edit_snapshot_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:aspectRatioFl="1" >
+
+                <com.star.talk.startalk.widget.MagicBoardView
+                    android:id="@+id/m_edit_magic_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:magicAspectRatio="1"
+                    app:magicEditMode="true" />
+
+                <ImageView
+                    android:id="@+id/m_edit_img_water_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|left"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/img_m_edit_water_mark" />
+            </com.star.talk.startalk.widget.AspectRatioFrameLayout>
+
+            <View
+                android:id="@+id/m_edit_divider_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider_m_edit_gridview" />
+
+            <GridView
+                android:id="@+id/m_edit_grid_view"
+                style="@style/StarTalk.GridView.SelectorTransparent"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:horizontalSpacing="0px"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="0px" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
