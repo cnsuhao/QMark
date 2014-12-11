@@ -269,6 +269,7 @@
         <!-- <meta-data android:name="APP_CHANNEL" android:value="Meizu" /> -->
         <!-- <meta-data android:name="APP_CHANNEL" android:value="MuMaYi" /> -->
         <!-- <meta-data android:name="APP_CHANNEL" android:value="UC" /> -->
+        <!-- <meta-data android:name="APP_CHANNEL" android:value="ChinaMobileMarket" /> -->
 
     </application>
 
