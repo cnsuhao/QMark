@@ -1,6 +1,7 @@
 <resources>
 
     <color name="bg_app">#fefff8</color>
+    <color name="bg_snow">#ffcd92</color>
     <color name="bg_app_alpha_cc">#ccfefff8</color>
     <color name="bg_title_orange">#ff8e68</color>
     <color name="bg_black_alpha_7f">#7f000000</color>

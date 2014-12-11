@@ -50,10 +50,12 @@ public class WelcomeActy extends AbsBaseActivity {
 
 	@ViewId(R.id.m_welcome_img_logo)
 	private ImageView mImgLogo;
-	@ViewId(R.id.m_welcome_img_market)
-	private ImageView mImgMarket;
-	@ViewId(R.id.m_welcome_text_market)
-	private TextView mTextMarket;
+	@ViewId(R.id.m_welcome_img_market_yingyongbao)
+	private ImageView mImgMarketYingYongBao;
+	@ViewId(R.id.m_welcome_img_market_baidu)
+	private ImageView mImgMarketBaiDu;
+	@ViewId(R.id.m_welcome_text_market_baidu)
+	private TextView mTextMarketBaiDu;
 	@ViewId(R.id.m_welcome_text_test)
 	private TextView mTextTest;
 	@ViewId(R.id.m_welcome_login_btn_bg)
@@ -88,8 +90,9 @@ public class WelcomeActy extends AbsBaseActivity {
 		}
 
 		mLoginPanel.setVisibility(View.GONE);
-		mImgMarket.setVisibility(View.GONE);
-		mTextMarket.setVisibility(View.GONE);
+		mImgMarketYingYongBao.setVisibility(View.GONE);
+		mImgMarketBaiDu.setVisibility(View.GONE);
+		mTextMarketBaiDu.setVisibility(View.GONE);
 		mTextTest.setVisibility(Debug.DEBUG ? View.VISIBLE : View.GONE);
 		if (Debug.DEBUG) mTextTest.setTypeface(FontUtils.getTypefaceWithCode(this, 1));
 
@@ -129,6 +132,10 @@ public class WelcomeActy extends AbsBaseActivity {
 		mLoginPanel.setVisibility(View.VISIBLE);
 	}
 
+	private String getAppChannel() {
+		return Manifest.MetaData.getString(WelcomeActy.this, "APP_CHANNEL");
+	}
+
 	private final AnimationListener mLogoAnimListener = new AnimationListener() {
 		@Override
 		public void onAnimationStart(Animation animation) {}
@@ -136,8 +143,13 @@ public class WelcomeActy extends AbsBaseActivity {
 		public void onAnimationRepeat(Animation animation) {}
 		@Override
 		public void onAnimationEnd(Animation animation) {
-			mImgMarket.setVisibility(View.VISIBLE);
-			mTextMarket.setVisibility(View.VISIBLE);
+			String appChannel = getAppChannel();
+			if (appChannel.equalsIgnoreCase("BaiDu")) {
+				mImgMarketBaiDu.setVisibility(View.VISIBLE);
+				mTextMarketBaiDu.setVisibility(View.VISIBLE);
+			} else if (appChannel.equalsIgnoreCase("YingYongBao")) {
+				mImgMarketYingYongBao.setVisibility(View.VISIBLE);
+			}
 
 			if (GuideActy.isShown(WelcomeActy.this)) {
 				if (checkLoginedOrGoToMain(false)) {
@@ -249,7 +261,7 @@ public class WelcomeActy extends AbsBaseActivity {
 			params.put("qqstr", qqstr);
 			params.put("clienttime", String.valueOf(System.currentTimeMillis()));
 			params.put("deviceid", Device.getUniqueId(WelcomeActy.this));
-			params.put("channel", Manifest.MetaData.getString(WelcomeActy.this, "APP_CHANNEL"));
+			params.put("channel", getAppChannel());
 			params.put("openid", UID.encrypt(qqstr));
 
 			App.getFHttp().get(Const.Url.login, App.getHeadersWithNoUidToken(), params, new AjaxCallBack<String>() {
