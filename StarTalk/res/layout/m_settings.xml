@@ -10,6 +10,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
+    <include layout="@layout/include_miui_v_6_immerse_height" />
+
         <RelativeLayout style="@style/StarTalk.Title.Bg" >
 
             <ImageButton

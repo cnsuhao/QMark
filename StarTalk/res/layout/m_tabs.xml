@@ -5,6 +5,8 @@
     android:background="@color/bg_app"
     android:orientation="vertical" >
 
+    <include layout="@layout/include_miui_v_6_immerse_height" />
+
     <FrameLayout
         android:id="@+id/m_tabs_content_panel"
         android:layout_width="match_parent"
