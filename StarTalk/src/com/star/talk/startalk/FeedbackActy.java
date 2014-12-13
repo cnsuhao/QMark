@@ -51,6 +51,12 @@ public class FeedbackActy extends AbsBaseActivity {
 				ContributeActy.startMeFromFeedback(FeedbackActy.this);
 			}
 		});
+
+		/* 在不同dpi的手机上bitmap会被缩放，倒是偏移。已经更改为放到drawable-nodpi下了
+		 * Options opt = new Options();
+		 * opt.inScaled = false;
+		 * mMagicView.setBackgroundDrawable(new BitmapDrawable(BitmapFactory.decodeResource(getResources(), R.drawable.img_m_feedback_magic, opt)));
+		 */
 		mMagicView.setTextFont(FontUtils.getTypefaceWithCode(FeedbackActy.this, 1));
 	}
 }
