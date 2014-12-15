@@ -136,6 +136,10 @@ public class WelcomeActy extends AbsBaseActivity {
 		return Manifest.MetaData.getString(WelcomeActy.this, "APP_CHANNEL");
 	}
 
+	private boolean getMarketFlag() {
+		return Manifest.MetaData.getBoolean(WelcomeActy.this, "MARKET_FLAG", false);
+	}
+
 	private final AnimationListener mLogoAnimListener = new AnimationListener() {
 		@Override
 		public void onAnimationStart(Animation animation) {}
@@ -143,12 +147,14 @@ public class WelcomeActy extends AbsBaseActivity {
 		public void onAnimationRepeat(Animation animation) {}
 		@Override
 		public void onAnimationEnd(Animation animation) {
-			String appChannel = getAppChannel();
-			if (appChannel.equalsIgnoreCase("BaiDu")) {
-				mImgMarketBaiDu.setVisibility(View.VISIBLE);
-				mTextMarketBaiDu.setVisibility(View.VISIBLE);
-			} else if (appChannel.equalsIgnoreCase("YingYongBao")) {
-				mImgMarketYingYongBao.setVisibility(View.VISIBLE);
+			if (getMarketFlag()) {
+				String appChannel = getAppChannel();
+				if (appChannel.equalsIgnoreCase("BaiDu")) {
+					mImgMarketBaiDu.setVisibility(View.VISIBLE);
+					mTextMarketBaiDu.setVisibility(View.VISIBLE);
+				} else if (appChannel.equalsIgnoreCase("YingYongBao")) {
+					mImgMarketYingYongBao.setVisibility(View.VISIBLE);
+				}
 			}
 
 			if (GuideActy.isShown(WelcomeActy.this)) {
