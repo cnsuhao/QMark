@@ -116,6 +116,8 @@ public class WelcomeSnowActy extends AbsBaseActivity {
 		super.onResume();
 		mPaused = false;
 
+		startSkipInterval();
+
 		((AnimationDrawable) mTree1.getDrawable()).start();
 		((AnimationDrawable) mTree2.getDrawable()).start();
 
@@ -320,12 +322,29 @@ public class WelcomeSnowActy extends AbsBaseActivity {
 	private final OnClickListener mOnSkipClick = new OnClickListener() {
 		@Override
 		public void onClick(View v) {
-			if (GuideActy.isShown(WelcomeSnowActy.this)) {
-				WelcomeActy.startMe(WelcomeSnowActy.this);
-			} else {
-				GuideActy.startMe(WelcomeSnowActy.this);
-			}
-			WelcomeSnowActy.this.finish();
+			onSkipRun();
 		}
 	};
+
+	private void startSkipInterval() {
+		App.get().getMainHandler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				onSkipRun();
+			}
+		}, App.get().isFirstLaunch() ? 15000 : 3000);
+	}
+
+	private void onSkipRun() {
+		if (GuideActy.isShown(WelcomeSnowActy.this)) {
+			if (App.isLogined()) {
+				CategoryActy_v_1.startMe(WelcomeSnowActy.this);
+			} else {
+				WelcomeActy.startMe(WelcomeSnowActy.this);
+			}
+		} else {
+			GuideActy.startMe(WelcomeSnowActy.this);
+		}
+		WelcomeSnowActy.this.finish();
+	}
 }

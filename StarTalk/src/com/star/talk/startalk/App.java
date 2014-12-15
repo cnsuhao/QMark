@@ -108,6 +108,14 @@ public class App extends AbsApp {
 		get().startActivity(i);
 	}
 
+	public static boolean isLogined() {
+		try {
+			UID.nextToken(get());
+			return true;
+		} catch (TokenNotValidException e) {}
+		return false;
+	}
+
 	private static String getNextUidToken() throws TokenNotValidException {
 		try {
 			return UID.nextToken(get());

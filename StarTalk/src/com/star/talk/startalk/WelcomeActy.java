@@ -30,7 +30,6 @@ import com.star.talk.startalk.data.api.Login;
 import com.star.talk.startalk.thirdapi.ShareSdk;
 import com.star.talk.startalk.utils.FontUtils;
 import com.tisumoon.AbsBaseActivity;
-import com.tisumoon.exception.TokenNotValidException;
 import com.umeng.message.ALIAS_TYPE;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
@@ -107,16 +106,13 @@ public class WelcomeActy extends AbsBaseActivity {
 	}
 
 	private boolean checkLoginedOrGoToMain(boolean gotoMain) {
-		try {
-			UID.nextToken(WelcomeActy.this);
-			if (gotoMain) {
-				//MainTabsActy.startMe(WelcomeActy.this);
-				CategoryActy_v_1.startMe(WelcomeActy.this);
-				WelcomeActy.this.finish();
-			}
-			return true;
-		} catch (TokenNotValidException e) {}
-		return false;
+		boolean logined = App.isLogined();
+		if (logined && gotoMain) {
+			//MainTabsActy.startMe(WelcomeActy.this);
+			CategoryActy_v_1.startMe(WelcomeActy.this);
+			WelcomeActy.this.finish();
+		}
+		return logined;
 	}
 
 	private void updateLoginBtnState(boolean readyForClick) {
