@@ -332,7 +332,7 @@ public class WelcomeSnowActy extends AbsBaseActivity {
 			public void run() {
 				onSkipRun();
 			}
-		}, App.get().isFirstLaunch() ? 15000 : 3000);
+		}, App.get().isFirstLaunch() ? 30000 : 6000);
 	}
 
 	private void onSkipRun() {
