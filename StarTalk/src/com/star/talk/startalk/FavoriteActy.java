@@ -160,7 +160,7 @@ public class FavoriteActy extends AbsBaseListViewActivity<GridView, FavoriteBean
 	};
 
 	private boolean ensureViewState(boolean loaddata, boolean recentUse, boolean feedbackIfNoNet) {
-		if (App.showLoadingOrNoNet(getAdapter().getCount() == 0, feedbackIfNoNet, loaddata, mImgState)) {
+		if (App.showLoadingOrNoNet(getAdapter().getCount() == 0, loaddata, feedbackIfNoNet, mImgState)) {
 			if (recentUse) {
 				loadDataRecentUseFromNet();
 			} else {
