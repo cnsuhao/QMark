@@ -38,7 +38,6 @@ import com.wei.c.L;
 import com.wei.c.anno.ViewId;
 import com.wei.c.anno.ViewLayoutId;
 import com.wei.c.phone.Device;
-import com.wei.c.utils.Manifest;
 import com.wei.c.widget.DotLoadingView;
 
 @ViewLayoutId(R.layout.m_welcome)
@@ -128,14 +127,6 @@ public class WelcomeActy extends AbsBaseActivity {
 		mLoginPanel.setVisibility(View.VISIBLE);
 	}
 
-	private String getAppChannel() {
-		return Manifest.MetaData.getString(WelcomeActy.this, "APP_CHANNEL");
-	}
-
-	private boolean getMarketFlag() {
-		return Manifest.MetaData.getBoolean(WelcomeActy.this, "MARKET_FLAG", false);
-	}
-
 	private final AnimationListener mLogoAnimListener = new AnimationListener() {
 		@Override
 		public void onAnimationStart(Animation animation) {}
@@ -143,8 +134,8 @@ public class WelcomeActy extends AbsBaseActivity {
 		public void onAnimationRepeat(Animation animation) {}
 		@Override
 		public void onAnimationEnd(Animation animation) {
-			if (getMarketFlag()) {
-				String appChannel = getAppChannel();
+			if (App.isMarketInfoShown()) {
+				String appChannel = App.getAppChannel();
 				if (appChannel.equalsIgnoreCase("BaiDu")) {
 					mImgMarketBaiDu.setVisibility(View.VISIBLE);
 					mTextMarketBaiDu.setVisibility(View.VISIBLE);
@@ -263,7 +254,7 @@ public class WelcomeActy extends AbsBaseActivity {
 			params.put("qqstr", qqstr);
 			params.put("clienttime", String.valueOf(System.currentTimeMillis()));
 			params.put("deviceid", Device.getUniqueId(WelcomeActy.this));
-			params.put("channel", getAppChannel());
+			params.put("channel", App.getAppChannel());
 			params.put("openid", UID.encrypt(qqstr));
 
 			App.getFHttp().get(Const.Url.login, App.getHeadersWithNoUidToken(), params, new AjaxCallBack<String>() {

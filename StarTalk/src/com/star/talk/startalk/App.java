@@ -37,6 +37,7 @@ import com.wei.c.framework.AbsApp;
 import com.wei.c.phone.Device;
 import com.wei.c.phone.Network;
 import com.wei.c.phone.Storage;
+import com.wei.c.utils.Manifest;
 
 public class App extends AbsApp {
 	private boolean mExitForRestart = false;
@@ -44,7 +45,7 @@ public class App extends AbsApp {
 	@Override
 	public void onCreate() {
 		//TODO
-		Debug.DEBUG = false;
+		Debug.DEBUG = isDebugMode();
 		if (Debug.DEBUG) PushAgent.getInstance(this).setDebugMode(true);
 
 		super.onCreate();
@@ -140,6 +141,18 @@ public class App extends AbsApp {
 		String verAndBrand = device.sysVersion + ", " + device.brand;
 		L.i(App.class, verAndBrand);
 		return verAndBrand;
+	}
+
+	public static boolean isDebugMode() {
+		return Manifest.MetaData.getBoolean(get(), "DEBUG_FLAG", false);
+	}
+
+	public static boolean isMarketInfoShown() {
+		return Manifest.MetaData.getBoolean(get(), "MARKET_FLAG", false);
+	}
+
+	public static String getAppChannel() {
+		return Manifest.MetaData.getString(get(), "APP_CHANNEL");
 	}
 
 	public static File getImagesCacheDir4ThirdApi() throws SdCardNotMountedException, SdCardNotValidException, FileCreateFailureException {

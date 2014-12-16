@@ -254,6 +254,7 @@
         <!-- 我们自己使用的渠道 -->
         <meta-data android:name="APP_CHANNEL" android:value="JingYuKeJi" />
         <meta-data android:name="MARKET_FLAG" android:value="false" />
+        <meta-data android:name="DEBUG_FLAG" android:value="true" />
 
         <!-- <meta-data android:name="APP_CHANNEL" android:value="JingYuKeJi" /> -->
         <!-- <meta-data android:name="APP_CHANNEL" android:value="YingYongBao" /> -->
