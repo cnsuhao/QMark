@@ -26,7 +26,7 @@
         android:layout_height="@dimen/height_f_m_m_tabs_left_btn_page_rgroup"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:paddingTop="2dp" >
+        android:paddingTop="1dp" >
 
         <RadioButton
             android:id="@+id/f_m_m_tabs_left_btn_page_rbtn_recommend"
@@ -36,6 +36,7 @@
             android:button="@null"
             android:contentDescription="@null"
             android:gravity="center"
+            android:padding="0px"
             android:text="@string/f_m_m_tabs_left_btn_page_rbtn_recommend"
             android:textColor="@color/text_f_m_m_tabs_left_btn_page_rbtn_x"
             android:textSize="@dimen/text_size_18" />
@@ -48,6 +49,7 @@
             android:button="@null"
             android:contentDescription="@null"
             android:gravity="center"
+            android:padding="0px"
             android:text="@string/f_m_m_tabs_left_btn_page_favorite"
             android:textColor="@color/text_f_m_m_tabs_left_btn_page_rbtn_x"
             android:textSize="@dimen/text_size_18" />
