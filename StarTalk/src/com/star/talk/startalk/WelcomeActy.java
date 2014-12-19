@@ -107,8 +107,8 @@ public class WelcomeActy extends AbsBaseActivity {
 	private boolean checkLoginedOrGoToMain(boolean gotoMain) {
 		boolean logined = App.isLogined();
 		if (logined && gotoMain) {
-			//MainTabsActy.startMe(WelcomeActy.this);
-			CategoryActy_v_1.startMe(WelcomeActy.this);
+			MainTabsActy_v_2.startMe(WelcomeActy.this);
+			//CategoryActy_v_1.startMe(WelcomeActy.this);
 			WelcomeActy.this.finish();
 		}
 		return logined;

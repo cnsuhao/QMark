@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="m_m_tabs_v_2_tabbar_height">49dp</dimen>
+    <dimen name="height_f_m_m_tabs_left_btn_page_rgroup">39dp</dimen>
+
+</resources>

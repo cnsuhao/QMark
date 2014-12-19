@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/btn_m_m_tabs_v_2_tabbar_right_checked" android:state_checked="true"/>
+    <item android:drawable="@drawable/btn_m_m_tabs_v_2_tabbar_right_checked" android:state_pressed="true"/>
+    <item android:drawable="@drawable/btn_m_m_tabs_v_2_tabbar_right"/>
+
+</selector>

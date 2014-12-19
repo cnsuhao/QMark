@@ -8,7 +8,7 @@
     <include layout="@layout/include_miui_v_6_immerse_height" />
 
     <FrameLayout
-        android:id="@+id/m_tabs_content_panel"
+        android:id="@+id/m_m_tabs_v_2_content_panel"
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="1" />
@@ -18,12 +18,11 @@
         android:layout_height="1px"
         android:background="@color/divider_title_bottom_black_alpha_4c" />
 
-    <RadioGroup
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="@dimen/padding_top_10"
-        android:paddingTop="@dimen/padding_top_10" >
+        android:layout_height="@dimen/m_m_tabs_v_2_tabbar_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
 
         <View
             android:layout_width="0px"
@@ -31,36 +30,36 @@
             android:layout_weight="1" />
 
         <RadioButton
-            android:id="@+id/m_tabs_btn_edit"
+            android:id="@+id/m_m_tabs_v_2_btn_tabbar_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_m_tabs_tabbar_edit_x"
+            android:background="@drawable/btn_m_m_tabs_v_2_tabbar_left_x"
             android:button="@null"
             android:contentDescription="@null" />
 
         <View
             android:layout_width="0px"
             android:layout_height="0px"
-            android:layout_weight="1.7" />
+            android:layout_weight="2" />
 
         <RadioButton
-            android:id="@+id/m_tabs_btn_sign_in_board"
+            android:id="@+id/m_m_tabs_v_2_btn_tabbar_center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_m_tabs_tabbar_sign_in_board_x"
+            android:background="@drawable/btn_m_m_tabs_v_2_tabbar_center"
             android:button="@null"
             android:contentDescription="@null" />
 
         <View
             android:layout_width="0px"
             android:layout_height="0px"
-            android:layout_weight="1.7" />
+            android:layout_weight="2" />
 
         <RadioButton
-            android:id="@+id/m_tabs_btn_mine"
+            android:id="@+id/m_m_tabs_v_2_btn_tabbar_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/btn_m_tabs_tabbar_mine_x"
+            android:background="@drawable/btn_m_m_tabs_v_2_tabbar_right_x"
             android:button="@null"
             android:contentDescription="@null" />
 
@@ -68,6 +67,6 @@
             android:layout_width="0px"
             android:layout_height="0px"
             android:layout_weight="1" />
-    </RadioGroup>
+    </LinearLayout>
 
 </LinearLayout>

@@ -96,7 +96,7 @@
             android:launchMode="singleTask"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name="com.star.talk.startalk.MainTabsActy"
+            android:name="com.star.talk.startalk.MainTabsActy_v_2"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:launchMode="singleTask" />

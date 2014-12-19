@@ -338,7 +338,7 @@ public class WelcomeSnowActy extends AbsBaseActivity {
 	private void onSkipRun() {
 		if (GuideActy.isShown(WelcomeSnowActy.this)) {
 			if (App.isLogined()) {
-				CategoryActy_v_1.startMe(WelcomeSnowActy.this);
+				MainTabsActy_v_2.startMe(WelcomeSnowActy.this);
 			} else {
 				WelcomeActy.startMe(WelcomeSnowActy.this);
 			}

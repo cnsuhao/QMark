@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/StarTalk.Title.Bg" >
+
+        <ImageButton
+            android:id="@+id/f_m_m_tabs_left_btn_page_title_left_btn_favorite"
+            style="@style/StarTalk.Title.Image.Left"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@drawable/btn_m_category_v_1_title_left_favorite_x" />
+
+        <ImageView
+            style="@style/StarTalk.Title.Image.Center"
+            android:contentDescription="@null"
+            android:paddingTop="4dp"
+            android:src="@drawable/img_m_category_title" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_f_m_m_tabs_left_btn_page_rgroup"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="2dp" >
+
+        <RadioButton
+            android:id="@+id/f_m_m_tabs_left_btn_page_rbtn_recommend"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:text="@string/f_m_m_tabs_left_btn_page_rbtn_recommend"
+            android:textColor="@color/text_f_m_m_tabs_left_btn_page_rbtn_x"
+            android:textSize="@dimen/text_size_18" />
+
+        <RadioButton
+            android:id="@+id/f_m_m_tabs_left_btn_page_rbtn_favorite"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:text="@string/f_m_m_tabs_left_btn_page_favorite"
+            android:textColor="@color/text_f_m_m_tabs_left_btn_page_rbtn_x"
+            android:textSize="@dimen/text_size_18" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/f_m_m_tabs_left_btn_page_scrollable_tabstrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2" >
+
+        <ImageView
+            android:layout_width="0px"
+            android:layout_height="1.5dp"
+            android:layout_weight="1"
+            android:background="@color/bg_title_orange"
+            android:contentDescription="@null" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/f_m_m_tabs_left_btn_page_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+</LinearLayout>
