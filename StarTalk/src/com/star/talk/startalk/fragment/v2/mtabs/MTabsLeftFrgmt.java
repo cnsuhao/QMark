@@ -39,25 +39,22 @@ public class MTabsLeftFrgmt extends AbsFragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		super.onCreateView(inflater, container, savedInstanceState);
 
+		mTabstrip.getViewTreeObserver().addOnGlobalLayoutListener(mOnGlobalLayoutListener);
 		mBtnTitleFav.setOnClickListener(mOnBtnTitleFavClick);
 		mRbtnRecommend.setOnCheckedChangeListener(mOnCheckedChangeListener);
 		mRbtnFavorite.setOnCheckedChangeListener(mOnCheckedChangeListener);
 		mViewPager.setOnPageChangeListener(mOnPageChangeListener);
-		mTabstrip.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
-			@Override
-			public void onGlobalLayout() {
-				mScrollWidth = (mTabstrip.getWidth() - mTabstrip.getPaddingLeft() - mTabstrip.getPaddingRight()) / 2;
-			}
-		});
 		mViewPager.setAdapter(new MTabsLeftFrgmtVPagerAdapter(getChildFragmentManager()));
 		mRbtnRecommend.setChecked(true);
 		return getCreatedView();
 	}
 
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
-	}
+	private final OnGlobalLayoutListener mOnGlobalLayoutListener = new OnGlobalLayoutListener() {
+		@Override
+		public void onGlobalLayout() {
+			mScrollWidth = (mTabstrip.getWidth() - mTabstrip.getPaddingLeft() - mTabstrip.getPaddingRight()) / 2;
+		}
+	};
 
 	private final OnClickListener mOnBtnTitleFavClick = new OnClickListener() {
 		@Override
@@ -107,7 +104,7 @@ public class MTabsLeftFrgmt extends AbsFragment {
 
 	public void scrollToTopAndRefresh() {
 		//TODO 这里需要处理多次连续调用的情况
-		
+		//getChildFragmentManager().findFragmentByTag(arg0);
 		// TODO Auto-generated method stub
 		L.i(MTabsLeftFrgmt.class, "scrollToTopAndRefresh");
 	}
