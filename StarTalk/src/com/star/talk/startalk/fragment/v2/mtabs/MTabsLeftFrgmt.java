@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageButton;
@@ -42,16 +43,15 @@ public class MTabsLeftFrgmt extends AbsFragment {
 		mRbtnRecommend.setOnCheckedChangeListener(mOnCheckedChangeListener);
 		mRbtnFavorite.setOnCheckedChangeListener(mOnCheckedChangeListener);
 		mViewPager.setOnPageChangeListener(mOnPageChangeListener);
+		mTabstrip.getViewTreeObserver().addOnGlobalLayoutListener(new OnGlobalLayoutListener() {
+			@Override
+			public void onGlobalLayout() {
+				mScrollWidth = (mTabstrip.getWidth() - mTabstrip.getPaddingLeft() - mTabstrip.getPaddingRight()) / 2;
+			}
+		});
 		mViewPager.setAdapter(new MTabsLeftFrgmtVPagerAdapter(getChildFragmentManager()));
 		mRbtnRecommend.setChecked(true);
 		return getCreatedView();
-	}
-
-	@Override
-	public void onResume() {
-		super.onResume();
-		mScrollWidth = (mTabstrip.getWidth() - mTabstrip.getPaddingLeft() - mTabstrip.getPaddingRight()) / 2;
-		L.d(MTabsLeftFrgmt.class, "------mScrollWidth:" + mScrollWidth);
 	}
 
 	@Override
@@ -105,8 +105,10 @@ public class MTabsLeftFrgmt extends AbsFragment {
 		}
 	};
 
-	public void scrollTopAndRefresh() {
+	public void scrollToTopAndRefresh() {
+		//TODO 这里需要处理多次连续调用的情况
+		
 		// TODO Auto-generated method stub
-		L.i(MTabsLeftFrgmt.class, "scrollTopAndRefresh");
+		L.i(MTabsLeftFrgmt.class, "scrollToTopAndRefresh");
 	}
 }

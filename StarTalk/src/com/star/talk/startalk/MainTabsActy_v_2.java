@@ -56,7 +56,8 @@ public class MainTabsActy_v_2 extends AbsBaseActivity implements OnClickListener
 			if (mTabIndex == 0) {
 				if (System.currentTimeMillis() - mLeftTabPressedTime <= 1000) {
 					MTabsLeftFrgmt frgmt = (MTabsLeftFrgmt) getSupportFragmentManager().findFragmentByTag(getResources().getResourceEntryName(id));
-					frgmt.scrollTopAndRefresh();
+					frgmt.scrollToTopAndRefresh();
+					mLeftTabPressedTime = 0;	//清零，防止连续多次点击的触发
 				} else {
 					mLeftTabPressedTime = System.currentTimeMillis();
 				}
