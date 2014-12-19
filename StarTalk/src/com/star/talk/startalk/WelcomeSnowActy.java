@@ -197,7 +197,7 @@ public class WelcomeSnowActy extends AbsBaseActivity {
 		if (mPaused) return;
 		FrameLayout.LayoutParams lp = (FrameLayout.LayoutParams) view.getLayoutParams();
 		lp.leftMargin = (int) (Math.random() * mScreenWidth);
-		lp.topMargin = (int) (Math.random() * mScreenHeight / 2);
+		lp.topMargin = (int) (Math.random() * mScreenHeight / 2) - mScreenHeight / 4;
 		view.setLayoutParams(lp);
 
 		Animation anim = createAnimation(lp.topMargin, new MyAnimationListener(view));
@@ -242,9 +242,9 @@ public class WelcomeSnowActy extends AbsBaseActivity {
 	}
 
 	private TranslateAnimation randomTranslate(int startTopInParent, int duration, AnimationListener l) {
-		float percent = 1 - startTopInParent * 1.0f / mScreenHeight;
+		float halfPercent = (1 + startTopInParent * 1.0f / mScreenHeight) / 2;
 		TranslateAnimation trans = new TranslateAnimation(Animation.RELATIVE_TO_SELF, 0, Animation.RELATIVE_TO_SELF, (float) ((Math.random() > 0.5f ? 1 : -1) * Math.random()) * 5,
-				Animation.RELATIVE_TO_PARENT, 0, Animation.RELATIVE_TO_PARENT, (float) (Math.random() * percent + 0.1f));
+				Animation.RELATIVE_TO_PARENT, 0, Animation.RELATIVE_TO_PARENT, (float) (Math.random() * halfPercent + halfPercent));
 		trans.setInterpolator(this, android.R.anim.linear_interpolator);
 		trans.setStartOffset(0);
 		trans.setDuration(duration);
@@ -332,7 +332,7 @@ public class WelcomeSnowActy extends AbsBaseActivity {
 			public void run() {
 				onSkipRun();
 			}
-		}, App.get().isFirstLaunch() ? 30000 : 6000);
+		}, App.get().isFirstLaunch() ? 60000 : 20000);
 	}
 
 	private void onSkipRun() {
