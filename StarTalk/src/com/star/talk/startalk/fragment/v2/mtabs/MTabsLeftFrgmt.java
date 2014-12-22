@@ -1,6 +1,11 @@
 package com.star.talk.startalk.fragment.v2.mtabs;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -103,9 +108,20 @@ public class MTabsLeftFrgmt extends AbsFragment {
 	};
 
 	public void scrollToTopAndRefresh() {
+		LocalBroadcastManager.getInstance(getActivity()).registerReceiver(new BroadcastReceiver() {
+			
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				// TODO Auto-generated method stub
+				
+			}
+		}, new IntentFilter(action));
+		LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(new Intent(action));
 		//TODO 这里需要处理多次连续调用的情况
 		//getChildFragmentManager().findFragmentByTag(arg0);
 		// TODO Auto-generated method stub
 		L.i(MTabsLeftFrgmt.class, "scrollToTopAndRefresh");
 	}
+	
+	
 }
