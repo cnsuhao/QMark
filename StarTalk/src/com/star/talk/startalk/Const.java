@@ -43,9 +43,14 @@ public class Const {
 
 	public static class Broadcast {
 		//YO通知被点击
-		public static String YO_CLICK_NOTIFY = "com.tisumoon.intent.action.YO_CLICK_NOTIFY";
+		public static String YO_CLICK_NOTIFY					= "com.tisumoon.intent.action.YO_CLICK_NOTIFY";
 		//Ya的Mail通知被点击
-		public static String YO_MAIL_CLICK_NOTIFY = "com.tisumoon.intent.action.YO_MAIL_CLICK_NOTIFY";
+		public static String YO_MAIL_CLICK_NOTIFY				= "com.tisumoon.intent.action.YO_MAIL_CLICK_NOTIFY";
+	}
+
+	public static class EventName {
+		public static String SCROLL_2_TOP_AND_REFRESH_frgmt_favorite	= "SCROLL_2_TOP_AND_REFRESH_frgmt_favorite";
+		public static String SCROLL_2_TOP_AND_REFRESH_frgmt_recommend	= "SCROLL_2_TOP_AND_REFRESH_frgmt_recommend";
 	}
 
 	public static class ThirdAccount {

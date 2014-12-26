@@ -1,11 +1,6 @@
 package com.star.talk.startalk.fragment.v2.mtabs;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +12,10 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 
+import com.star.talk.startalk.Const;
 import com.star.talk.startalk.FavoriteActy;
 import com.star.talk.startalk.R;
 import com.star.talk.startalk.adapter.v2.MTabsLeftFrgmtVPagerAdapter;
-import com.wei.c.L;
 import com.wei.c.anno.ViewId;
 import com.wei.c.anno.ViewLayoutId;
 import com.wei.c.framework.AbsFragment;
@@ -107,21 +102,8 @@ public class MTabsLeftFrgmt extends AbsFragment {
 		}
 	};
 
-	public void scrollToTopAndRefresh() {
-		LocalBroadcastManager.getInstance(getActivity()).registerReceiver(new BroadcastReceiver() {
-			
-			@Override
-			public void onReceive(Context context, Intent intent) {
-				// TODO Auto-generated method stub
-				
-			}
-		}, new IntentFilter(action));
-		LocalBroadcastManager.getInstance(getActivity()).sendBroadcast(new Intent(action));
-		//TODO 这里需要处理多次连续调用的情况
-		//getChildFragmentManager().findFragmentByTag(arg0);
-		// TODO Auto-generated method stub
-		L.i(MTabsLeftFrgmt.class, "scrollToTopAndRefresh");
+	public void scroll2TopAndRefresh() {
+		sendLocalEvent(mRbtnRecommend.isChecked() ? Const.EventName.SCROLL_2_TOP_AND_REFRESH_frgmt_recommend
+				: Const.EventName.SCROLL_2_TOP_AND_REFRESH_frgmt_favorite, null);
 	}
-	
-	
 }
