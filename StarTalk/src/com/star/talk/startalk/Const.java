@@ -58,6 +58,9 @@ public class Const {
 
 		public static String QQ_SCOPE							= "get_user_info, get_simple_userinfo";	//"get_user_info";	//"get_info(腾讯微博的), get_user_info, get_simple_userinfo";
 
-		//public static String BAIDU_MAP_API_KEY				= "7ae13368159d6a513eaa7a17b9413b4b";
+		//public static String BAIDU_MAP_API_KEY				= "9oWkxzjnEGfOmOL1s0f91ULd";
+
+		//WeChat_key QQ第三方登录
+		public static String WECHAT_APP_ID						= "wxdf420f6e4e95fcbd";
 	}
 }

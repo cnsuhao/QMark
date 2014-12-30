@@ -107,6 +107,8 @@
     <string name="i_footer_pull_2_refresh_more_loading">加载中</string>
     <string name="i_footer_pull_2_refresh_no_more">喵~亲爱的主人,主题每周都有更新哟!</string>
 
+    <string name="third_api_wechat_not_supported_version">当前微信版本不支持该操作</string>
+
     <string name="btn_m_choose_star_sign_baiyang"><Data><![CDATA[白羊座<br/><font color="#f59053">3.21-4.20</font>]]></Data></string>
     <string name="btn_m_choose_star_sign_jinniu"><Data><![CDATA[金牛座<br/><font color="#f59053">4.21-5.20</font>]]></Data></string>
     <string name="btn_m_choose_star_sign_shuangzi"><Data><![CDATA[双子座<br/><font color="#f59053">5.21-6.20</font>]]></Data></string>
