@@ -308,6 +308,7 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 		Baidu.destroy();
 		mPaint = null;
 		mCanvas = null;
+		if (mDialog != null) mDialog.cancel();
 		mDialog = null;
 		mDialogViewHolder = null;
 		super.onDestroy();
