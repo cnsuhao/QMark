@@ -871,7 +871,9 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 					//这里使用表情接口来发送清晰的图像
 					//但是效果不理想，发现表情me对于静态图，还是使用的图像方式而不是表情方式发送的
 					File file = new File(getData().mSnapShotPath);
-					String emojiPath = new File(file.getParentFile(), "emoji-" + file.getName()).getPath();
+					String name = file.getName();
+					name = name.substring(0, name.lastIndexOf('.')) + "-emoji.png";
+					String emojiPath = new File(file.getParentFile(), name).getPath();
 					BitmapUtils.saveImage(emojiPath, BitmapUtils.readImage(getData().mSnapShotPath, WeChat.THUMB_SIZE, WeChat.THUMB_SIZE));
 					WeChat.shareAsEmoji(mContext, "表情分享标题(该参数不起作用)", "内容描述(该参数不起作用)", emojiPath, getData().mSnapShotPath, false);
 
