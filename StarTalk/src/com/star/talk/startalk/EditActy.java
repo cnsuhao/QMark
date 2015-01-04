@@ -169,7 +169,7 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 					FavoriteActy.cacheRecentUse(EditActy.this, new FavoriteBean(mCurrent, text));
 					commitShare(text);
 				} catch (Exception e) {
-					L.e(this, e);
+					L.e(EditActy.class, e);
 				}
 			}
 		});
@@ -308,6 +308,7 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 		Baidu.destroy();
 		mPaint = null;
 		mCanvas = null;
+		if (mDialog != null) mDialog.cancel();
 		mDialog = null;
 		mDialogViewHolder = null;
 		super.onDestroy();
@@ -868,7 +869,11 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 					mShareComplete = true;
 				} else if (v == mBtnWechat) {
 					//这里使用表情接口来发送清晰的图像
-					WeChat.shareAsEmoji(mContext, "表情分享标题(该参数不起作用)", "内容描述(该参数不起作用)", getData().mSnapShotPath, getData().mSnapShotPath, false);
+					//但是效果不理想，发现表情me对于静态图，还是使用的图像方式而不是表情方式发送的
+					File file = new File(getData().mSnapShotPath);
+					String emojiPath = new File(file.getParentFile(), "emoji-" + file.getName()).getPath();
+					BitmapUtils.saveImage(emojiPath, BitmapUtils.readImage(getData().mSnapShotPath, WeChat.THUMB_SIZE, WeChat.THUMB_SIZE));
+					WeChat.shareAsEmoji(mContext, "表情分享标题(该参数不起作用)", "内容描述(该参数不起作用)", emojiPath, getData().mSnapShotPath, false);
 
 					//////WechatShare wechat = ShareSdk.share(mContext, WechatShare.class, mPlatformActionListener);
 					//////wechat.shareImage(getData().mSnapShotPath);
