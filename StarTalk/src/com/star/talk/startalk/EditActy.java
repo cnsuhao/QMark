@@ -92,6 +92,9 @@ import com.wei.c.utils.BitmapUtils;
 import com.wei.c.utils.PhotoUtils;
 import com.wei.c.utils.SPref;
 
+/**
+ * @author 周伟 Wei Chou(weichou2010@gmail.com)
+ */
 @ViewLayoutId(R.layout.m_edit)
 public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, EditGridAdapter> {
 	private static final String EXTRA_CATEGORY_ID		= EditActy.class.getName() + ".EXTRA_CATEGORY_ID";
