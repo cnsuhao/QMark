@@ -65,7 +65,7 @@ import com.star.talk.startalk.thirdapi.ShareSdk.QZoneShare;
 import com.star.talk.startalk.thirdapi.ShareSdk.Share;
 import com.star.talk.startalk.thirdapi.ShareSdk.SinaWeiboShare;
 import com.star.talk.startalk.thirdapi.ShareSdk.WechatMomentsShare;
-import com.star.talk.startalk.thirdapi.ShareSdk.WechatShare;
+import com.star.talk.startalk.thirdapi.WeChat;
 import com.star.talk.startalk.utils.FontUtils;
 import com.star.talk.startalk.utils.MagicBoardUtils;
 import com.star.talk.startalk.widget.MagicBoardView;
@@ -867,8 +867,11 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 					//不跳页，且不会回调，但是会弹窗，因此会收到onPause()，只要调用成功即视为分享成功，那么只要在onResume()时认为成功即可
 					mShareComplete = true;
 				} else if (v == mBtnWechat) {
-					WechatShare wechat = ShareSdk.share(mContext, WechatShare.class, mPlatformActionListener);
-					wechat.shareImage(getData().mSnapShotPath);
+					//这里使用表情接口来发送清晰的图像
+					WeChat.shareAsEmoji(mContext, "表情分享标题(该参数不起作用)", "内容描述(该参数不起作用)", getData().mSnapShotPath, getData().mSnapShotPath, false);
+
+					//////WechatShare wechat = ShareSdk.share(mContext, WechatShare.class, mPlatformActionListener);
+					//////wechat.shareImage(getData().mSnapShotPath);
 					mCurrPlatform = Wechat.NAME;
 					//不会正确回调，但会跳页，因此，只要调用成功即视为分享成功，同上
 					mShareComplete = true;

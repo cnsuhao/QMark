@@ -29,12 +29,13 @@ import com.tencent.mm.sdk.openapi.WXEmojiObject;
 import com.tencent.mm.sdk.openapi.WXMediaMessage;
 import com.wei.c.Debug;
 import com.wei.c.L;
-import com.wei.c.file.FileUtils;
+import com.wei.c.utils.BitmapUtils;
 
 /**
  * @author 周伟 Wei Chou(weichou2010@gmail.com)
  */
 public class WeChat {
+	private static final int THUMB_SIZE = 150;
 	private static final int TIMELINE_SUPPORTED_VERSION = 0x21020001;
 
 	private static IWXAPI sWxApi;
@@ -48,7 +49,17 @@ public class WeChat {
 		return sWxApi;
 	}
 
+	/**
+	 * 分享表情
+	 * @param context
+	 * @param title
+	 * @param description
+	 * @param thumbPngPath
+	 * @param gifPath
+	 * @param toCicle 是否分享到朋友圈，注意有些版本的微信不支持分享到朋友圈
+	 */
 	public static final void shareAsEmoji(Context context, String title, String description, String thumbPngPath, String gifPath, boolean toCicle) {
+		L.d(WeChat.class, "shareAsEmoji-----");
 		if (!checkOperationSupport(context, toCicle)) return;
 
 		WXEmojiObject emoji = new WXEmojiObject();
@@ -57,7 +68,8 @@ public class WeChat {
 		WXMediaMessage msg = new WXMediaMessage(emoji);
 		msg.title = title;
 		msg.description = description;
-		msg.thumbData = FileUtils.readBytesFromFile(thumbPngPath, 0, -1);
+		msg.thumbData = BitmapUtils.bmpToBytes(BitmapUtils.readImage(thumbPngPath, THUMB_SIZE, THUMB_SIZE), true);	//FileUtils.readBytesFromFile(thumbPngPath, 0, -1);
+		L.d(WeChat.class, "shareAsEmoji-----msg.thumbData:" + (msg.thumbData == null ? null : "length:" + msg.thumbData.length));
 
 		SendMessageToWX.Req req = new SendMessageToWX.Req();
 		req.transaction = buildTransaction("emoji");
