@@ -76,3 +76,15 @@
 -keep class m.framework.**{*;}
 -keep class org.apache.**{*;}
 
+#以下是腾讯的
+-keep class com.tencent.mm.sdk.openapi.WXMediaMessage {*;}
+-keep class com.tencent.mm.sdk.openapi.** implements com.tencent.mm.sdk.openapi.WXMediaMessage$IMediaObject {*;}
+
+
+
+
+
+
+
+
+
