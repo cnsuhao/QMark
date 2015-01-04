@@ -35,8 +35,9 @@ import com.wei.c.utils.BitmapUtils;
  * @author 周伟 Wei Chou(weichou2010@gmail.com)
  */
 public class WeChat {
-	private static final int THUMB_SIZE = 150;
-	private static final int TIMELINE_SUPPORTED_VERSION = 0x21020001;
+	public static final int THUMB_SIZE = 300;
+	public static final int THUMB_DATA_SIZE = 32 * 1024;	//32kb
+	public static final int TIMELINE_SUPPORTED_VERSION = 0x21020001;
 
 	private static IWXAPI sWxApi;
 	private static int sWxSdkVersion;
@@ -68,7 +69,7 @@ public class WeChat {
 		WXMediaMessage msg = new WXMediaMessage(emoji);
 		msg.title = title;
 		msg.description = description;
-		msg.thumbData = BitmapUtils.bmpToBytes(BitmapUtils.readImage(thumbPngPath, THUMB_SIZE, THUMB_SIZE), true);	//FileUtils.readBytesFromFile(thumbPngPath, 0, -1);
+		msg.thumbData = BitmapUtils.compressToSize(BitmapUtils.readImage(thumbPngPath, THUMB_SIZE, THUMB_SIZE), THUMB_DATA_SIZE, true);	//FileUtils.readBytesFromFile(thumbPngPath, 0, -1);
 		L.d(WeChat.class, "shareAsEmoji-----msg.thumbData:" + (msg.thumbData == null ? null : "length:" + msg.thumbData.length));
 
 		SendMessageToWX.Req req = new SendMessageToWX.Req();
