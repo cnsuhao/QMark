@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.star.talk.startalk"
-    android:versionCode="23"
-    android:versionName="1.1.3" >
+    android:versionCode="24"
+    android:versionName="1.1.4" >
 
     <permission
         android:name="com.star.talk.startalk.UID"
@@ -73,7 +73,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar" >
         <activity
-            android:name="com.star.talk.startalk.WelcomeSnowActy"
+            android:name="com.star.talk.startalk.WelcomeActy"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:launchMode="standard"
@@ -83,12 +83,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
+        <!-- <activity
             android:name="com.star.talk.startalk.WelcomeActy"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /> -->
         <activity
             android:name="com.star.talk.startalk.GuideActy"
             android:configChanges="orientation|keyboardHidden|screenSize"
