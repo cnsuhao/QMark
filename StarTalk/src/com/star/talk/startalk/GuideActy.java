@@ -32,7 +32,7 @@ public class GuideActy extends AbsBaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		/*if (!getApp().isFirstLaunch()) {
+		/*if (isShown(this)) {
 			startWelcomeActy();
 			return;
 		}*/

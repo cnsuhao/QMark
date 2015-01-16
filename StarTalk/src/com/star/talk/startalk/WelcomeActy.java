@@ -48,6 +48,8 @@ public class WelcomeActy extends AbsBaseActivity {
 
 	@ViewId(R.id.m_welcome_img_logo)
 	private ImageView mImgLogo;
+	@ViewId(R.id.m_welcome_img_market_360safe)
+	private ImageView mImgMarket360Safe;
 	@ViewId(R.id.m_welcome_img_market_yingyongbao)
 	private ImageView mImgMarketYingYongBao;
 	@ViewId(R.id.m_welcome_img_market_baidu)
@@ -88,6 +90,7 @@ public class WelcomeActy extends AbsBaseActivity {
 		}
 
 		mLoginPanel.setVisibility(View.GONE);
+		mImgMarket360Safe.setVisibility(View.GONE);
 		mImgMarketYingYongBao.setVisibility(View.GONE);
 		mImgMarketBaiDu.setVisibility(View.GONE);
 		mTextMarketBaiDu.setVisibility(View.GONE);
@@ -139,6 +142,8 @@ public class WelcomeActy extends AbsBaseActivity {
 				if (appChannel.equalsIgnoreCase("BaiDu")) {
 					mImgMarketBaiDu.setVisibility(View.VISIBLE);
 					mTextMarketBaiDu.setVisibility(View.VISIBLE);
+				} else if (appChannel.equalsIgnoreCase("360Safe")) {
+					mImgMarket360Safe.setVisibility(View.VISIBLE);
 				} else if (appChannel.equalsIgnoreCase("YingYongBao")) {
 					mImgMarketYingYongBao.setVisibility(View.VISIBLE);
 				}
