@@ -40,6 +40,7 @@ import com.tisumoon.exception.TokenNotValidException;
 import com.wei.c.L;
 import com.wei.c.anno.ViewId;
 import com.wei.c.anno.ViewLayoutId;
+import com.wei.c.anno.ViewListId;
 import com.wei.c.data.abs.AbsJson;
 import com.wei.c.phone.Network;
 import com.wei.c.phone.Network.State;
@@ -50,6 +51,7 @@ import com.wei.c.utils.ArrayUtils;
 import com.wei.c.utils.SPref;
 
 @ViewLayoutId(R.layout.m_favorite)
+@ViewListId(R.id.m_favorite_grid_view)
 public class FavoriteActy extends AbsBaseListViewActivity<GridView, FavoriteBean, FavoriteGridAdapter> {
 	public static void startMe(Context context) {
 		startMe(context, new Intent(context, FavoriteActy.class));
@@ -140,11 +142,6 @@ public class FavoriteActy extends AbsBaseListViewActivity<GridView, FavoriteBean
 	protected void onPause() {
 		NetConnectionReceiver.unregisterObserver(mNetObserver);
 		super.onPause();
-	}
-
-	@Override
-	protected int listViewId() {
-		return R.id.m_favorite_grid_view;
 	}
 
 	@Override

@@ -17,9 +17,11 @@ import com.star.talk.startalk.data.MagicBoardBean;
 import com.star.talk.startalk.data.MineListBean;
 import com.wei.c.anno.ViewId;
 import com.wei.c.anno.ViewLayoutId;
+import com.wei.c.anno.ViewListId;
 import com.wei.c.framework.AbsListViewFragment;
 
 @ViewLayoutId(R.layout.f_m_tabs_mine)
+@ViewListId(R.id.f_m_tabs_mine_list)
 public class MineFragment extends AbsListViewFragment<ListView, MineListBean, MineListAdapter> {
 	@ViewId(R.id.f_m_tabs_mine_title_right_btn_setting)
 	private ImageButton mBtnSetting;
@@ -35,11 +37,6 @@ public class MineFragment extends AbsListViewFragment<ListView, MineListBean, Mi
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 		getData();
-	}
-
-	@Override
-	protected int listViewId() {
-		return R.id.f_m_tabs_mine_list;
 	}
 
 	@Override
