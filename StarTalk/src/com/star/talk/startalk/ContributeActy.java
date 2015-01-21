@@ -35,12 +35,14 @@ import com.tisumoon.exception.TokenNotValidException;
 import com.wei.c.L;
 import com.wei.c.anno.ViewId;
 import com.wei.c.anno.ViewLayoutId;
+import com.wei.c.anno.ViewListId;
 import com.wei.c.file.FileUtils;
 import com.wei.c.utils.PhotoUtils;
 import com.wei.c.utils.PhotoUtils.CropArgs;
 import com.wei.c.utils.PhotoUtils.Session;
 
 @ViewLayoutId(R.layout.m_contribute)
+@ViewListId(R.id.m_contribute_grid_view)
 public class ContributeActy extends AbsBaseListViewActivity<GridView, Uri, ContributeAddImageAdapter> {
 	private static final String EXTRA_FROM_FEEDBACK		= ContributeActy.class.getName() + ".FROM_FEEDBACK";
 	private static final String EXTRA_SESSION			= ContributeActy.class.getName() + ".SESSION";
@@ -188,11 +190,6 @@ public class ContributeActy extends AbsBaseListViewActivity<GridView, Uri, Contr
 			getAdapter().notifyDataSetChanged();
 			session = null;
 		}
-	}
-
-	@Override
-	protected int listViewId() {
-		return R.id.m_contribute_grid_view;
 	}
 
 	@Override

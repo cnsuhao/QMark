@@ -79,6 +79,7 @@ import com.tisumoon.thirdapi.Baidu.LocNetvGsm;
 import com.wei.c.L;
 import com.wei.c.anno.ViewId;
 import com.wei.c.anno.ViewLayoutId;
+import com.wei.c.anno.ViewListId;
 import com.wei.c.file.FileUtils;
 import com.wei.c.framework.ViewHolder;
 import com.wei.c.phone.Network;
@@ -96,6 +97,7 @@ import com.wei.c.utils.SPref;
  * @author 周伟 Wei Chou(weichou2010@gmail.com)
  */
 @ViewLayoutId(R.layout.m_edit)
+@ViewListId(R.id.m_edit_grid_view)
 public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, EditGridAdapter> {
 	private static final String EXTRA_CATEGORY_ID		= EditActy.class.getName() + ".EXTRA_CATEGORY_ID";
 	private static final String EXTRA_DEFAULT_DATA		= EditActy.class.getName() + ".EXTRA_DEFAULT_DATA";
@@ -439,11 +441,6 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 			mFabuBmp.recycle();
 			mFabuBmp = null;
 		}
-	}
-
-	@Override
-	protected int listViewId() {
-		return R.id.m_edit_grid_view;
 	}
 
 	@Override

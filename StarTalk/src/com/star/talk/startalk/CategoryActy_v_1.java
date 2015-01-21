@@ -31,6 +31,7 @@ import com.umeng.update.UmengUpdateAgent;
 import com.wei.c.L;
 import com.wei.c.anno.ViewId;
 import com.wei.c.anno.ViewLayoutId;
+import com.wei.c.anno.ViewListId;
 import com.wei.c.phone.Network;
 import com.wei.c.phone.Network.State;
 import com.wei.c.phone.Network.Type;
@@ -40,6 +41,7 @@ import com.wei.c.utils.SPref;
 import com.wei.c.widget.AbsPull2RefreshListView.OnRefreshListener;
 
 @ViewLayoutId(R.layout.m_category_v_1)
+@ViewListId(R.id.m_category_v_1_list)
 public class CategoryActy_v_1 extends AbsBaseListViewActivity<Pull2RefreshListView, MainCategoryListBean, MainCategoryListAdapter> implements OnRefreshListener {
 	public static void startMe(Context context) {
 		startMe(context, new Intent(context, CategoryActy_v_1.class));
@@ -121,11 +123,6 @@ public class CategoryActy_v_1 extends AbsBaseListViewActivity<Pull2RefreshListVi
 			return;
 		}
 		super.onBackPressed();
-	}
-
-	@Override
-	protected int listViewId() {
-		return R.id.m_category_v_1_list;
 	}
 
 	@Override
