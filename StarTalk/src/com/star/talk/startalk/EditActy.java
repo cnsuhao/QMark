@@ -26,7 +26,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -891,13 +890,10 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 					if (mPathSaved == null) {
 						mPathSaved = PhotoUtils.savePictureToPhotoAlbum(mContext, null, getData().mSnapShotPath, null, mContext.getResources().getString(R.string.app_name));
 						if (mPathSaved == null) {
+							L.i(EditActy.class, "copyFileToDir");
 							File file = FileUtils.copyFileToDir(getData().mSnapShotPath, App.getPicturesSaveDir(), "QMark-", "png");
 							if (file != null) mPathSaved = file.getPath();
-						}
-						if (mPathSaved != null) {
-							Intent i = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
-							i.setData(Uri.fromFile(new File(mPathSaved)));
-							mContext.sendBroadcast(i);
+							if (mPathSaved != null) PhotoUtils.notifyPhotoChange(mContext, mPathSaved);
 						}
 						L.i(EditActy.class, "mPathSaved: " + mPathSaved);
 					}
