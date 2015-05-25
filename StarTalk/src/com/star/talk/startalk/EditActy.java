@@ -384,7 +384,7 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 			String path = App.getImagesCacheDir4ThirdApi().getPath() + File.separator + getSnapshotFilename();
 			L.d(EditActy.class, "path:" + path);
 
-			BitmapUtils.saveImage(path, fabuBmp);
+			BitmapUtils.saveImage(path, fabuBmp, true);
 			return path;
 		} finally {
 			mMagicBoard.getTextView().setEnabled(true);
@@ -873,7 +873,7 @@ public class EditActy extends AbsBaseListViewActivity<GridView, EditListBean, Ed
 					String name = file.getName();
 					name = name.substring(0, name.lastIndexOf('.')) + "-emoji.png";
 					String emojiPath = new File(file.getParentFile(), name).getPath();
-					BitmapUtils.saveImage(emojiPath, BitmapUtils.readImage(getData().mSnapShotPath, WeChat.THUMB_SIZE, WeChat.THUMB_SIZE));
+					BitmapUtils.saveImage(emojiPath, BitmapUtils.readImage(getData().mSnapShotPath, WeChat.THUMB_SIZE, WeChat.THUMB_SIZE), true);
 					WeChat.shareAsEmoji(mContext, "表情分享标题(该参数不起作用)", "内容描述(该参数不起作用)", emojiPath, getData().mSnapShotPath, false);
 
 					//////WechatShare wechat = ShareSdk.share(mContext, WechatShare.class, mPlatformActionListener);
