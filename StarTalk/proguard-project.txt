@@ -31,10 +31,11 @@
 -keepattributes Signature
 -keep class com.google.gson.stream.**{*;}
 
-#上面已经有了-keepattributes Signature保持泛型
--keep class * extends **.ViewHolder{
-	<methods>;
+#上面已经有了-keepattributes Signature保持泛型，这里只保持构造方法
+-keepclassmembers class * extends **.ViewHolder{
+	<init>(android.view.View);
 }
+
 -keep class * extends com.wei.c.data.abs.**{*;}
 #-keep class * extends com.tisumoon.data.abs.**{*;}
 #有些类虽然不是继承自**.data.abs.**,但是仍然需要被gson反序列化，
